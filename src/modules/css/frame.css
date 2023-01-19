@@ -1,0 +1,150 @@
+body,
+html {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #37393f;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track-piece {
+  background-color: transparent;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:vertical {
+  height: 12px;
+  background-color: #5865f2;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:horizontal {
+  width: 12px;
+  background-color: #5865f2;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:vertical:hover,
+::-webkit-scrollbar-thumb:horizontal:hover {
+  background-color: #37393f;
+}
+
+.main-frame {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+  min-width: 800px;
+  border-radius: 10px;
+}
+
+.main-frame .h-main {
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-frame .v-bar {
+  position: relative;
+  box-sizing: border-box;
+  width: 200px;
+  height: 100%;
+
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: #1e2124;
+  padding-top: 150px;
+  min-width: 200px;
+  min-height: 600px;
+  box-sizing: border-box;
+}
+
+.main-frame .logo {
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  top: 20px;
+  left: 40px;
+}
+
+.main-frame .v-info-type {
+  box-sizing: border-box;
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-left: 7px solid transparent;
+}
+
+.main-frame .v-bar .v-bar-active {
+  background-color: #5867f240;
+  border-left: 7px solid #5867f2;
+}
+
+.main-frame .v-sub-bar .v-sub-active {
+  background-color: #5867f240;
+}
+
+.main-frame .v-info-type:hover {
+  background-color: #5867f2;
+}
+
+.main-frame .v-info-type .v-info-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.main-frame .v-info-type .v-info-name {
+  color: #e7efe5;
+  font-size: 18px;
+  width: 100px;
+  min-width: 100px;
+  text-overflow: hidden;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 15px;
+}
+
+/*  v-sub-bar */
+.main-frame .v-sub-bar {
+  box-sizing: border-box;
+  width: 200px;
+  height: 100%;
+
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: #282b30;
+  padding-top: 150px;
+  min-width: 200px;
+  min-height: 600px;
+  box-sizing: border-box;
+}
+
+.main-frame .main-content {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  background-color: #37393f;
+}

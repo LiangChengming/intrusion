@@ -1,0 +1,90 @@
+.id-chart-wrapper {
+  box-sizing: border-box;
+  width: 99%;
+  height: 100%;
+  /* max-width: 1200px; */
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  column-gap: 20px;
+  row-gap: 20px;
+
+  min-width: 600px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.id-chart-wrapper .id-inner-section .geo-chart {
+  min-width: 800px;
+  min-height: 600px;
+  /* background-color: #37393f; */
+  border-radius: 10px;
+}
+
+.id-chart-wrapper .line-chart {
+  width: 95%;
+  height: 300px;
+  padding-top: 50px;
+  padding-left: 50px;
+  border-radius: 10px;
+  color: "#FFF";
+  min-height: 300px;
+}
+
+.id-chart-wrapper .id-inner-section {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 400px;
+
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+
+  background-color: #282b30;
+  padding: 20px;
+  margin: 10px;
+  overflow: hidden;
+
+  border-left: 3px solid transparent;
+  position: relative;
+}
+
+.id-chart-wrapper #geo {
+  min-height: 1000px;
+}
+
+.id-chart-wrapper .id-inner-section:hover {
+  border-left: 3px solid #5867f2;
+  /* background-color: #2f3258; */
+}
+
+.id-chart-wrapper .id-inner-section .id-data-head-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.id-chart-wrapper .id-inner-section .headline {
+  top: 0px;
+  left: 20px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 50px;
+  background-color: #424549;
+  column-gap: 10px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.id-chart-wrapper .id-inner-section .id-data-headline {
+  box-sizing: border-box;
+
+  border-radius: 10px;
+  color: #efe7e5;
+  font-weight: bold;
+}
