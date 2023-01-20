@@ -68,18 +68,18 @@ const option = {
     zlevel: 1,
   },
   visualMap: {
-    show: true,
+    show: false,
     type: "continuous",
     min: 0,
     max: 100,
-    right: 40,
-    top: 200,
+    right: 10,
+    top: 10,
     seriesIndex: [0],
     color: ["#FFFFFF", "#CFB813", "#68FB00"],
     textStyle: {
       color: "#feffff",
     },
-    calculable: true,
+    calculable: false,
     zlevel: 2,
   },
   series: [
@@ -129,7 +129,7 @@ export const GeoChart = (props) => {
       style={props.style}
       option={option}
       onEvents={onEvents}
-      autoResize={true}
+      autoResize={false}
     />
   );
 };

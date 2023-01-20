@@ -48,7 +48,15 @@ const rows = [
 
 export const Tabular = (props) => {
   return (
-    <Box sx={{ minHeight: "400px", width: "100%", color: "#efe7e5" }}>
+    <Box
+      sx={{
+        minHeight: "400px",
+        height: "100%",
+        maxHeight: "350px",
+        width: "100%",
+        color: "#efe7e5",
+      }}
+    >
       <DataGrid
         rows={rows}
         columns={columns}
@@ -57,7 +65,7 @@ export const Tabular = (props) => {
         checkboxSelection
         disableSelectionOnClick
         experimentalFeatures={{ newEditingApi: true }}
-        style={{ backgroundColor: "#fff" }}
+        style={{ backgroundColor: "#FFF", color: "#000" }}
       />
     </Box>
   );

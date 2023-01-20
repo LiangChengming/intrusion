@@ -4,7 +4,7 @@ html {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background-color: #37393f;
+  background-color: #ebebeb;
 }
 
 ::-webkit-scrollbar {
@@ -176,8 +176,6 @@ html {
   flex-direction: column;
   align-items: flex-start;
   overflow: hidden;
-
-  background-color: #37393f;
 }
 
 .main-frame .h-sub-bar .h-info-type {

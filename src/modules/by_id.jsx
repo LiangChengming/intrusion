@@ -21,23 +21,23 @@ export const ChartById = (props) => {
 
   return (
     <div className="id-chart-wrapper">
-      <div className="id-inner-section" id="geo">
-        <div className="headline">
-          <img src={geo} className="id-data-head-icon"></img>
-          <div className="id-data-headline"> 地域分布 </div>
-        </div>
-        <GeoChart className="geo-chart" />
-      </div>
+      {/* <div className="headline">
+        <img src={geo} className="id-data-head-icon"></img>
+        <div className="id-data-headline"> 地域分布 </div>
+      </div> */}
+      <GeoChart className="geo-chart shadow-box" />
 
+      {/* <div className="headline">
+        <div className="id-data-headline"> 危险ID </div>
+      </div> */}
+      <SimpleChart
+        type="hbar"
+        id="city-bar"
+        className="simple-chart shaow-box"
+      />
+      <SimpleChart type="line" className="simple-chart shaow-box" />
+      <SimpleChart type="line" className="simple-chart shaow-box" />
       <Tabular />
-
-      <div className="id-inner-section">
-        <div className="headline">
-          <img src={badguy} className="id-data-head-icon"></img>
-          <div className="id-data-headline"> 危险ID </div>
-        </div>
-        <SimpleChart type="line" className="simple-chart" />
-      </div>
     </div>
   );
 };
