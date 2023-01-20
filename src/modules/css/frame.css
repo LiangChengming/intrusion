@@ -121,6 +121,7 @@ html {
   justify-content: flex-start;
   align-items: center;
   border-left: 7px solid transparent;
+  cursor: pointer;
 }
 
 .main-frame .v-bar .v-bar-active {
@@ -134,14 +135,17 @@ html {
 
 .main-frame .v-info-type:hover {
   background-color: #5867f2;
+  text-decoration: none;
 }
 
 .main-frame .v-info-type .v-info-icon {
   width: 20px;
   height: 20px;
+  cursor: pointer;
 }
 
 .main-frame .v-info-type .v-info-name {
+  cursor: pointer;
   color: #e7efe5;
   font-size: 13px;
   width: 100px;
@@ -150,6 +154,7 @@ html {
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
   padding-left: 15px;
+  text-decoration: none;
 }
 
 /*  v-sub-bar */
