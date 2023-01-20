@@ -7,16 +7,12 @@ import badguy from "../assets/badguy.svg";
 
 import "./css/by_id.css";
 import { SimpleChart } from "./simpleChart";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  useParams,
-} from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 export const ChartById = (props) => {
-  let { category, app } = useParams();
-  console.log("category=", category, " app=", app);
+  let { x } = useParams();
+  console.log("inf=", x);
+  console.log("props=", props);
 
   return (
     <div className="id-chart-wrapper">

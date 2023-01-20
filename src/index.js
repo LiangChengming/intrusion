@@ -16,9 +16,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
   <Router>
-
     <Routes>
-      <Route extact path="/" element={<MainFrame />} />
+      <Route extact path="/*" element={<MainFrame />} />
     </Routes>
   </Router>
 

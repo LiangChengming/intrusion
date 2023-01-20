@@ -27,6 +27,7 @@ import {
   Route,
   Link,
   useParams,
+  Switch,
   useNavigate,
 } from "react-router-dom";
 
@@ -83,25 +84,26 @@ export const MainFrame = () => {
   const ls1 = menus.map((x) => {
     const subitem = x.categories.map((y) => {
       return (
-        <Link
+        <div
           className={
-            y.value == target.current.cate
+            y.value === target.current.cate
               ? "v-info-type v-bar-active"
               : "v-info-type"
           }
-          value={y.value}
+          name={y.value}
           key={y.value}
           onClick={(event) => {
-            target.current.cate = event.currentTarget.key.value;
-            console.log(event.currentTarget.key.value);
-            navigate(
-              `/id/${event.currentTarget.key.value}/${target.current.app}/`
-            );
+            target.current.cate = event.currentTarget.attributes.name.value;
+            // console.log(event.currentTarget.attributes.name.value);
+            // const url = `/id/${event.currentTarget.attributes.name.value}/${target.current.app}/`;
+            const url = `id/${event.currentTarget.attributes.name.value}/`;
+            console.log("url=", url);
+            navigate(url);
           }}
         >
           <img src={y.icon} className="v-info-icon" />
           <label className="v-info-name"> {y.name}</label>
-        </Link>
+        </div>
       );
     });
     return (
@@ -150,9 +152,8 @@ export const MainFrame = () => {
 
       <div className="main-content">
         <Routes>
-          <Route extact path="/" element={<ChartById />} />
-          <Route extact path="/id/:category/:app/" element={<ChartById />} />
-          {/* <Route extact path="/ai" element={<ChartByAi />} /> */}
+          <Route exact path="id/:x/" element={<ChartById />} />
+          <Route path="/" element={<ChartById />} />
         </Routes>
       </div>
     </div>
