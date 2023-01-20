@@ -36,16 +36,16 @@ export const MainFrame = () => {
       primary: "ID检测",
       categories: [
         { name: "电话诈骗", url: "/id/phone/", icon: phone },
-        { name: "邪教组织", url: "", icon: person },
-        { name: "恐怖暴力", url: "", icon: valient },
+        { name: "邪教组织", url: "/id/person/", icon: person },
+        { name: "恐怖暴力", url: "/id/valient/", icon: valient },
       ],
       icon: finger,
     },
     {
       primary: "人工智能回复",
       categories: [
-        { name: "舆论引导", url: "", icon: valient },
-        { name: "其他/Oth", url: "", icon: valient },
+        { name: "舆论引导", url: "/ai/news/", icon: valient },
+        { name: "其他/Oth", url: "/ai/oths/", icon: valient },
       ],
       icon: finger,
     },
@@ -55,22 +55,24 @@ export const MainFrame = () => {
     {
       primary: "国内",
       categories: [
-        { name: "微博", url: "", icon: weibo_logo },
-        { name: "抖音", url: "", icon: tiktok_logo },
-        { name: "快手", url: "", icon: kuaishou_logo },
-        { name: "blibli", url: "", icon: blibli_logo },
-        { name: "知乎", url: "", icon: zhihu_logo },
+        { name: "微博", url: "weibo", icon: weibo_logo },
+        { name: "抖音", url: "tiktok", icon: tiktok_logo },
+        { name: "快手", url: "kuaishou", icon: kuaishou_logo },
+        { name: "blibli", url: "blibli", icon: blibli_logo },
+        { name: "知乎", url: "zhihu", icon: zhihu_logo },
       ],
+      icon: facebook_logo,
     },
     {
       primary: "国际",
       categories: [
-        { name: "facebook", url: "", icon: facebook_logo },
-        { name: "twitter", url: "", icon: twitter_logo },
-        { name: "raddit", url: "", icon: raddit_logo },
-        { name: "youtube", url: "", icon: youtube_logo },
-        { name: "instgram", url: "", icon: ins_logo },
+        { name: "facebook", url: "facebook", icon: facebook_logo },
+        { name: "twitter", url: "twitter", icon: twitter_logo },
+        { name: "raddit", url: "raddit", icon: raddit_logo },
+        { name: "youtube", url: "youtube", icon: youtube_logo },
+        { name: "instgram", url: "instgram", icon: ins_logo },
       ],
+      icon: facebook_logo,
     },
   ];
 
@@ -82,6 +84,7 @@ export const MainFrame = () => {
             y.url == target.cate ? "v-info-type v-bar-active" : "v-info-type"
           }
           value={y.url}
+          key={y.url}
         >
           <img src={y.icon} className="v-info-icon" />
           <label className="v-info-name"> {y.name}</label>
@@ -89,7 +92,7 @@ export const MainFrame = () => {
       );
     });
     return (
-      <div className="v-info-main">
+      <div className="v-info-main" key={x.primary}>
         <div className="v-info-main-type">
           <img src={x.icon} className="v-info-icon"></img>
           <label className="v-info-name">{x.primary}</label>
@@ -106,13 +109,18 @@ export const MainFrame = () => {
           className={
             y.url == target.app ? "v-info-type v-sub-active" : "v-info-type"
           }
+          key={y.url}
         >
           <img src={y.icon} className="v-info-icon" />
           <div className="v-info-name">{y.name}</div>
         </div>
       );
     });
-    return <div className="v-sub-bar">{subitem}</div>;
+    return (
+      <div className="v-sub-bar" key={x.primary}>
+        {subitem}
+      </div>
+    );
   });
 
   return (
@@ -186,9 +194,24 @@ export const MainFrame = () => {
 
         <div className="main-content">
           <Routes>
-            <Route extact path="/" element={<ChartById />} />
-            <Route extact path="/id/" element={<ChartById />} />
-            {/* <Route extact path="/id" element={<ChartById />} /> */}
+            <Route
+              extact
+              path="/"
+              action={(request) => {
+                // await api data
+                console.log("invoke ajax: for data");
+              }}
+              element={<ChartById />}
+            />
+
+            <Route
+              extact
+              path="/ai"
+              action={(request) => {
+                // await api data
+              }}
+              element={<ChartById />}
+            />
           </Routes>
         </div>
         {/* <div className="h-bar">
