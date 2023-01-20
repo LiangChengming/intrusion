@@ -4,6 +4,7 @@ import ReactECharts from "echarts-for-react";
 import { GeoChart } from "./geo_map";
 import geo from "../assets/geo.svg";
 import badguy from "../assets/badguy.svg";
+import { id_list } from "./core_data.js";
 
 import "./css/by_id.css";
 import { SimpleChart } from "./simpleChart";
@@ -11,8 +12,9 @@ import { useParams } from "react-router-dom";
 
 export const ChartById = (props) => {
   let { category, app } = useParams();
+
   console.log("inf=", { category, app });
-  console.log("props=", props);
+  // 根据category和app查询数据，并渲染
 
   return (
     <div className="id-chart-wrapper">
