@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 
+import "./css/common.css";
 import "./css/frame.css";
 import finger from "../assets/id.svg";
 import valient from "../assets/valient.svg";

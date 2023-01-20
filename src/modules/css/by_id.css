@@ -17,12 +17,6 @@
   overflow-y: scroll;
 }
 
-.shadow-box {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 20px #ccc;
-}
-
 .id-chart-wrapper .geo-chart {
   width: 49%;
   min-height: 200px;

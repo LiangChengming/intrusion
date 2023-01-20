@@ -9,9 +9,8 @@ import { id_list } from "./core_data.js";
 import "./css/by_id.css";
 import { SimpleChart } from "./simpleChart";
 import { useParams } from "react-router-dom";
-import { DataGrid } from "@mui/x-data-grid";
 import { Tabular } from "./table";
-import { Tab } from "@mui/material";
+import { DetailInfo } from "./detail";
 
 export const ChartById = (props) => {
   let { category, app } = useParams();
@@ -38,6 +37,8 @@ export const ChartById = (props) => {
       <SimpleChart type="line" className="simple-chart shaow-box" />
       <SimpleChart type="line" className="simple-chart shaow-box" />
       <Tabular />
+
+      <DetailInfo></DetailInfo>
     </div>
   );
 };
