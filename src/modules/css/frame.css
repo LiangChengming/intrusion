@@ -129,10 +129,6 @@ html {
   border-left: 7px solid #5867f2;
 }
 
-.main-frame .h-sub-bar .h-sub-active {
-  background-color: #5867f240;
-}
-
 .main-frame .v-info-type:hover {
   background-color: #5867f2;
   text-decoration: none;
@@ -164,7 +160,7 @@ html {
   height: 40px;
 
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 
   background-color: #282b30;
@@ -190,6 +186,8 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  /* transform: skewX(-10deg); */
 }
 
 .main-frame .h-sub-bar .h-info-type:hover {
@@ -197,17 +195,23 @@ html {
 }
 
 .main-frame .h-sub-bar .h-info-type .h-info-icon {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
+  /* transform: skewX(10deg); */
 }
 
 .main-frame .h-sub-bar .h-info-type .h-info-name {
   cursor: pointer;
   color: #e7efe5;
   font-size: 13px;
-  padding-left: 10px;
+  padding-left: 5px;
   text-overflow: hidden;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
+  /* transform: skewX(10deg); */
+}
+
+.main-frame .h-sub-bar .h-sub-active {
+  background-color: #5867f2;
 }

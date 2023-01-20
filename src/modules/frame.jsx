@@ -18,7 +18,8 @@ import zhihu_logo from "../assets/zhihu.svg";
 import blibli_logo from "../assets/bilibili.svg";
 import tiktok_logo from "../assets/tiktok.svg";
 import kuaishou_logo from "../assets/kuaishou.svg";
-import gallery from "../assets/gallery.svg";
+
+// import gallery from "../assets/gallery.svg";
 import { ChartById } from "./by_id";
 
 import {
@@ -46,7 +47,7 @@ export const MainFrame = () => {
       icon: finger,
     },
     {
-      primary: "人工智能回复",
+      primary: "AI智能回复",
       categories: [
         { name: "舆论引导", value: "news", icon: valient },
         { name: "其他/Oth", value: "oths", icon: valient },

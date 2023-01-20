@@ -9,6 +9,9 @@ import { id_list } from "./core_data.js";
 import "./css/by_id.css";
 import { SimpleChart } from "./simpleChart";
 import { useParams } from "react-router-dom";
+import { DataGrid } from "@mui/x-data-grid";
+import { Tabular } from "./table";
+import { Tab } from "@mui/material";
 
 export const ChartById = (props) => {
   let { category, app } = useParams();
@@ -24,24 +27,9 @@ export const ChartById = (props) => {
           <div className="id-data-headline"> 地域分布 </div>
         </div>
         <GeoChart className="geo-chart" />
-        <SimpleChart type="bar" className="simple-chart" />
       </div>
 
-      <div className="id-inner-section">
-        <div className="headline">
-          <img src={geo} className="id-data-head-icon"></img>
-          <div className="id-data-headline"> 人群属性 </div>
-        </div>
-        <SimpleChart type="line" className="simple-chart" />
-      </div>
-
-      <div className="id-inner-section">
-        <div className="headline">
-          <img src={geo} className="id-data-head-icon"></img>
-          <div className="id-data-headline"> 人群属性 </div>
-        </div>
-        <SimpleChart type="line" className="simple-chart" />
-      </div>
+      <Tabular />
 
       <div className="id-inner-section">
         <div className="headline">
