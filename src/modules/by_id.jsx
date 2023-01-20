@@ -7,6 +7,7 @@ import badguy from "../assets/badguy.svg";
 import { id_list } from "./core_data.js";
 
 import "./css/by_id.css";
+import "./css/common.css";
 import { SimpleChart } from "./simpleChart";
 import { useParams } from "react-router-dom";
 import { Tabular } from "./table";
@@ -20,22 +21,15 @@ export const ChartById = (props) => {
 
   return (
     <div className="id-chart-wrapper">
-      {/* <div className="headline">
-        <img src={geo} className="id-data-head-icon"></img>
-        <div className="id-data-headline"> 地域分布 </div>
-      </div> */}
       <GeoChart className="geo-chart shadow-box" />
 
-      {/* <div className="headline">
-        <div className="id-data-headline"> 危险ID </div>
-      </div> */}
       <SimpleChart
         type="hbar"
         id="city-bar"
-        className="simple-chart shaow-box"
+        className="simple-chart shadow-box"
       />
-      <SimpleChart type="line" className="simple-chart shaow-box" />
-      <SimpleChart type="line" className="simple-chart shaow-box" />
+      <SimpleChart type="line" className="simple-chart shadow-box" />
+      <SimpleChart type="line" className="simple-chart shadow-box" />
       <Tabular />
 
       <DetailInfo></DetailInfo>
