@@ -7,17 +7,17 @@ import person from "../assets/person.svg";
 import phone from "../assets/phone.svg";
 import vasion from "../assets/vasion.svg";
 
-import facebook_logo from "../assets/facebook-logo.png";
-import ins_logo from "../assets/ins-logo.png";
-import youtube_logo from "../assets/youtube-logo.png";
-import twitter_logo from "../assets/twitter-logo.png";
-import raddit_logo from "../assets/raddit-logo.png";
-import redbook_logo from "../assets/redbook-logo.png";
-import weibo_logo from "../assets/weibo-logo.png";
-import zhihu_logo from "../assets/zhihu-logo.png";
-import blibli_logo from "../assets/blibli-logo.png";
-import tiktok_logo from "../assets/tiktok-logo.png";
-import kuaishou_logo from "../assets/kuaishou-logo.png";
+import facebook_logo from "../assets/facebook.svg";
+import ins_logo from "../assets/instgram.svg";
+import youtube_logo from "../assets/youtube.svg";
+import twitter_logo from "../assets/twitter.svg";
+import reddit_logo from "../assets/reddit.svg";
+import redbook_logo from "../assets/xiaohongshu.svg";
+import weibo_logo from "../assets/weibo.svg";
+import zhihu_logo from "../assets/zhihu.svg";
+import blibli_logo from "../assets/bilibili.svg";
+import tiktok_logo from "../assets/tiktok.svg";
+import kuaishou_logo from "../assets/kuaishou.svg";
 import gallery from "../assets/gallery.svg";
 import { ChartById } from "./by_id";
 
@@ -73,7 +73,7 @@ export const MainFrame = () => {
       categories: [
         { name: "facebook", value: "facebook", icon: facebook_logo },
         { name: "twitter", value: "twitter", icon: twitter_logo },
-        { name: "raddit", value: "raddit", icon: raddit_logo },
+        { name: "reddit", value: "reddit", icon: reddit_logo },
         { name: "youtube", value: "youtube", icon: youtube_logo },
         { name: "instgram", value: "instgram", icon: ins_logo },
       ],
@@ -120,19 +120,19 @@ export const MainFrame = () => {
         <div
           className={
             y.value == target.current.app
-              ? "v-info-type v-sub-active"
-              : "v-info-type"
+              ? "h-info-type h-sub-active"
+              : "h-info-type"
           }
           name={y.value}
           key={y.value}
           onClick={(event) => {
             target.current.app = event.currentTarget.attributes.name.value;
-            const url = `/id/${target.current.category}/${event.currentTarget.attributes.name.value}/`;
+            const url = `/id/${target.current.cate}/${event.currentTarget.attributes.name.value}/`;
             navigate(url);
           }}
         >
-          <img src={y.icon} className="v-info-icon" />
-          <div className="v-info-name">{y.name}</div>
+          <img src={y.icon} className="h-info-icon" />
+          <div className="h-info-name">{y.name}</div>
         </div>
       );
     });
@@ -148,12 +148,8 @@ export const MainFrame = () => {
         {ls1}
       </div>
 
-      <div className="v-sub-bar">
-        <img src={gallery} className="v-sub-logo"></img>
-        {ls2}
-      </div>
-
       <div className="main-content">
+        <div className="h-sub-bar">{ls2}</div>
         <Routes>
           <Route exact path="id/:category/:app/" element={<ChartById />} />
           <Route path="/" element={<ChartById />} />
