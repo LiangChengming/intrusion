@@ -1,21 +1,20 @@
 import React from "react";
 import ReactEcharts from "echarts-for-react";
 
-export const SimpleChart = (props) => {
+export const LineChart = (props) => {
   const options = {
-    grid: { top: 20, right: 40, bottom: 20, left: 40 },
+    grid: { top: 8, right: 8, bottom: 24, left: 36 },
     xAxis: {
       type: "category",
-      data: ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5"],
+      data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
     },
     yAxis: {
       type: "value",
     },
     series: [
       {
-        data: [400, 300, 350, 200, 280],
-        // bar or line
-        type: props.type,
+        data: [820, 932, 901, 934, 1290, 1330, 1320],
+        type: "line",
         smooth: true,
       },
     ],
