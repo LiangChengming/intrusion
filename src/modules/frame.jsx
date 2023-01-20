@@ -94,10 +94,7 @@ export const MainFrame = () => {
           key={y.value}
           onClick={(event) => {
             target.current.cate = event.currentTarget.attributes.name.value;
-            // console.log(event.currentTarget.attributes.name.value);
-            // const url = `/id/${event.currentTarget.attributes.name.value}/${target.current.app}/`;
-            const url = `id/${event.currentTarget.attributes.name.value}/`;
-            console.log("url=", url);
+            const url = `/id/${event.currentTarget.attributes.name.value}/${target.current.app}/`;
             navigate(url);
           }}
         >
@@ -126,7 +123,13 @@ export const MainFrame = () => {
               ? "v-info-type v-sub-active"
               : "v-info-type"
           }
+          name={y.value}
           key={y.value}
+          onClick={(event) => {
+            target.current.app = event.currentTarget.attributes.name.value;
+            const url = `/id/${target.current.category}/${event.currentTarget.attributes.name.value}/`;
+            navigate(url);
+          }}
         >
           <img src={y.icon} className="v-info-icon" />
           <div className="v-info-name">{y.name}</div>
@@ -152,7 +155,7 @@ export const MainFrame = () => {
 
       <div className="main-content">
         <Routes>
-          <Route exact path="id/:x/" element={<ChartById />} />
+          <Route exact path="id/:category/:app/" element={<ChartById />} />
           <Route path="/" element={<ChartById />} />
         </Routes>
       </div>

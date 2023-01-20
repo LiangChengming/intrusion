@@ -10,8 +10,8 @@ import { SimpleChart } from "./simpleChart";
 import { useParams } from "react-router-dom";
 
 export const ChartById = (props) => {
-  let { x } = useParams();
-  console.log("inf=", x);
+  let { category, app } = useParams();
+  console.log("inf=", { category, app });
   console.log("props=", props);
 
   return (
