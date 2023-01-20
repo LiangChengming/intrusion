@@ -17,6 +17,7 @@ import zhihu_logo from "../assets/zhihu-logo.png";
 import blibli_logo from "../assets/blibli-logo.png";
 import tiktok_logo from "../assets/tiktok-logo.png";
 import kuaishou_logo from "../assets/kuaishou-logo.png";
+import gallery from "../assets/gallery.svg";
 import { ChartById } from "./by_id";
 
 export const MainFrame = () => {
@@ -60,6 +61,7 @@ export const MainFrame = () => {
       </div>
 
       <div className="v-sub-bar">
+        <img src={gallery} className="v-sub-logo"></img>
         <div className="v-info-type v-sub-active">
           <img src={weibo_logo} className="v-info-icon" />
           <div className="v-info-name">微博</div>

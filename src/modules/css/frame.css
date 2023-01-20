@@ -135,6 +135,15 @@ html {
   min-width: 200px;
   min-height: 600px;
   box-sizing: border-box;
+  position: relative;
+}
+
+.main-frame .v-sub-bar .v-sub-logo {
+  position: absolute;
+  top: 0px;
+  left: 30px;
+  width: 130px;
+  height: 130px;
 }
 
 .main-frame .main-content {

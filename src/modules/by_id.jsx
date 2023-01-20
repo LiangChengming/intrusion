@@ -3,6 +3,7 @@ import React from "react";
 import ReactECharts from "echarts-for-react";
 import { GeoChart } from "./geo_map";
 import geo from "../assets/geo.svg";
+import badguy from "../assets/badguy.svg";
 
 import "./css/by_id.css";
 
@@ -72,8 +73,8 @@ export const ChartById = (props) => {
 
       <div className="id-inner-section">
         <div className="headline">
-          <img src={geo} className="id-data-head-icon"></img>
-          <div className="id-data-headline"> 人群属性 </div>
+          <img src={badguy} className="id-data-head-icon"></img>
+          <div className="id-data-headline"> 危险ID </div>
         </div>
         <ReactECharts
           className="line-chart"

@@ -17,14 +17,17 @@
 }
 
 .id-chart-wrapper .id-inner-section .geo-chart {
-  min-width: 800px;
-  min-height: 600px;
+  width: 60%;
+  /* max-width: 400px; */
+  /* max-height: 200px; */
+  /* min-width: 800px;
+  min-height: 600px; */
   /* background-color: #37393f; */
   border-radius: 10px;
 }
 
 .id-chart-wrapper .line-chart {
-  width: 95%;
+  width: 90%;
   height: 300px;
   padding-top: 50px;
   padding-left: 50px;
@@ -40,7 +43,6 @@
 
   display: flex;
   justify-content: flex-start;
-  flex-direction: column;
   align-items: flex-start;
 
   background-color: #282b30;
@@ -50,10 +52,11 @@
 
   border-left: 3px solid transparent;
   position: relative;
+  border-radius: 10px;
 }
 
 .id-chart-wrapper #geo {
-  min-height: 1000px;
+  min-height: 500px;
 }
 
 .id-chart-wrapper .id-inner-section:hover {
@@ -62,8 +65,8 @@
 }
 
 .id-chart-wrapper .id-inner-section .id-data-head-icon {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
 }
 
 .id-chart-wrapper .id-inner-section .headline {
@@ -73,12 +76,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 150px;
-  height: 50px;
+  width: 100px;
+  height: 30px;
   background-color: #424549;
-  column-gap: 10px;
+  column-gap: 9px;
+  font-size: 13px;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
+  /* padding: 10px; */
 }
 
 .id-chart-wrapper .id-inner-section .id-data-headline {
