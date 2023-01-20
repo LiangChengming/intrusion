@@ -78,6 +78,11 @@ html {
   left: 40px;
 }
 
+.main-frame .v-info-main-type {
+  box-sizing: border-box;
+  width: 100%;
+}
+
 .main-frame .v-info-type {
   box-sizing: border-box;
   width: 100%;
