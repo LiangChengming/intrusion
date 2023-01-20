@@ -27,7 +27,8 @@ export const SimpleChart = (props) => {
   return (
     <ReactEcharts
       option={options}
-      style={{ width: "600px", height: "300px" }}
+      className={props.className}
+      style={props.style}
     ></ReactEcharts>
   );
 };

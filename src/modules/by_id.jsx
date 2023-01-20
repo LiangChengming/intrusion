@@ -17,7 +17,7 @@ export const ChartById = (props) => {
           <div className="id-data-headline"> 地域分布 </div>
         </div>
         <GeoChart className="geo-chart" />
-        <SimpleChart type="bar" />
+        <SimpleChart type="bar" className="bar-chart" />
       </div>
 
       <div className="id-inner-section">
@@ -25,7 +25,7 @@ export const ChartById = (props) => {
           <img src={geo} className="id-data-head-icon"></img>
           <div className="id-data-headline"> 人群属性 </div>
         </div>
-        <SimpleChart type="line" />
+        <SimpleChart type="line" className="line-chart" />
       </div>
 
       <div className="id-inner-section">
@@ -33,7 +33,7 @@ export const ChartById = (props) => {
           <img src={geo} className="id-data-head-icon"></img>
           <div className="id-data-headline"> 人群属性 </div>
         </div>
-        <SimpleChart type="line" />
+        <SimpleChart type="line" className="line-chart" />
       </div>
 
       <div className="id-inner-section">
@@ -41,7 +41,7 @@ export const ChartById = (props) => {
           <img src={badguy} className="id-data-head-icon"></img>
           <div className="id-data-headline"> 危险ID </div>
         </div>
-        <SimpleChart type="line" />
+        <SimpleChart type="line" className="line-chart" />
       </div>
     </div>
   );
