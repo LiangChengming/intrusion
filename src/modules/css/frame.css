@@ -78,9 +78,37 @@ html {
   left: 40px;
 }
 
+.main-frame .v-info-main {
+  box-sizing: border-box;
+  width: 100%;
+}
+
 .main-frame .v-info-main-type {
   box-sizing: border-box;
   width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-left: 7px solid transparent;
+}
+
+.main-frame .v-info-main-type .v-info-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.main-frame .v-info-main-type .v-info-name {
+  color: #e7efe5;
+  font-size: 20px;
+  width: 100px;
+  min-width: 100px;
+  text-overflow: hidden;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 15px;
 }
 
 .main-frame .v-info-type {
@@ -109,13 +137,13 @@ html {
 }
 
 .main-frame .v-info-type .v-info-icon {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
 }
 
 .main-frame .v-info-type .v-info-name {
   color: #e7efe5;
-  font-size: 18px;
+  font-size: 13px;
   width: 100px;
   min-width: 100px;
   text-overflow: hidden;

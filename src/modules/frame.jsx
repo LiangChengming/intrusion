@@ -29,16 +29,17 @@ import {
 } from "react-router-dom";
 
 export const MainFrame = () => {
-  const [target, setTarget] = useState("/weibo");
+  const [target, setTarget] = useState({ cate: "/id/phone/", app: "weibo" });
 
   const menus = [
     {
       primary: "ID检测",
       categories: [
-        { name: "电话诈骗", url: "/weibo", icon: finger },
+        { name: "电话诈骗", url: "/id/phone/", icon: phone },
         { name: "邪教组织", url: "", icon: person },
         { name: "恐怖暴力", url: "", icon: valient },
       ],
+      icon: finger,
     },
     {
       primary: "人工智能回复",
@@ -46,6 +47,7 @@ export const MainFrame = () => {
         { name: "舆论引导", url: "", icon: valient },
         { name: "其他/Oth", url: "", icon: valient },
       ],
+      icon: finger,
     },
   ];
 
@@ -77,7 +79,7 @@ export const MainFrame = () => {
       return (
         <div
           className={
-            y.url == target ? "v-info-type v-bar-active" : "v-info-type"
+            y.url == target.cate ? "v-info-type v-bar-active" : "v-info-type"
           }
           value={y.url}
         >
@@ -86,7 +88,31 @@ export const MainFrame = () => {
         </div>
       );
     });
-    return <div className="v-info-main-type">{subitem}</div>;
+    return (
+      <div className="v-info-main">
+        <div className="v-info-main-type">
+          <img src={x.icon} className="v-info-icon"></img>
+          <label className="v-info-name">{x.primary}</label>
+        </div>
+        {subitem}
+      </div>
+    );
+  });
+
+  const ls2 = subMenus.map((x) => {
+    const subitem = x.categories.map((y) => {
+      return (
+        <div
+          className={
+            y.url == target.app ? "v-info-type v-sub-active" : "v-info-type"
+          }
+        >
+          <img src={y.icon} className="v-info-icon" />
+          <div className="v-info-name">{y.name}</div>
+        </div>
+      );
+    });
+    return <div className="v-sub-bar">{subitem}</div>;
   });
 
   return (
