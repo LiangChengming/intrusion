@@ -17,9 +17,9 @@ export const SimpleChart = (props) => {
 
   const options = {
     grid: { top: 20, right: 40, bottom: 20, left: 40, containLabel: true },
-    xAxis: props.type != "hbar" ? categories : valueType,
+    xAxis: props.type !== "hbar" ? categories : valueType,
     yAxis:
-      props.type == "hbar"
+      props.type === "hbar"
         ? [
             categories,
             {
@@ -38,7 +38,7 @@ export const SimpleChart = (props) => {
       {
         data: seriesData,
         // bar or line
-        type: props.type == "hbar" ? "bar" : props.type,
+        type: props.type === "hbar" ? "bar" : props.type,
         smooth: true,
       },
     ],
