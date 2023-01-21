@@ -1,5 +1,4 @@
 import React from "react";
-import { render } from "react-dom";
 import echarts from "echarts";
 import ReactEcharts from "echarts-for-react";
 import china from "echarts/map/json/china.json";

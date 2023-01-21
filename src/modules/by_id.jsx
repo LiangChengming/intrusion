@@ -1,13 +1,13 @@
 import React from "react";
 
-import ReactECharts from "echarts-for-react";
-import { GeoChart } from "./geo_map";
-import geo from "../assets/geo.svg";
-import badguy from "../assets/badguy.svg";
-import { id_list } from "./core_data.js";
+// import geo from "../assets/geo.svg";
+// import badguy from "../assets/badguy.svg";
+// import { id_list } from "./core_data.js";
 
 import "./css/by_id.css";
 import "./css/common.css";
+
+import { GeoChart } from "./geo_map";
 import { SimpleChart } from "./simpleChart";
 import { useParams } from "react-router-dom";
 import { Tabular } from "./table";

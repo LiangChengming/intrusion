@@ -7,9 +7,6 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link,
-  useParams,
-  useNavigate,
 } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

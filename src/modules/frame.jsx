@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 
 import "./css/common.css";
 import "./css/frame.css";
@@ -23,15 +23,7 @@ import kuaishou_logo from "../assets/kuaishou.svg";
 // import gallery from "../assets/gallery.svg";
 import { ChartById } from "./by_id";
 
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link,
-  useParams,
-  Switch,
-  useNavigate,
-} from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 
 export const MainFrame = () => {
   const target = useRef({ cate: "phone", app: "weibo" });
@@ -100,7 +92,7 @@ export const MainFrame = () => {
             navigate(url);
           }}
         >
-          <img src={y.icon} className="v-info-icon" />
+          <img alt="Icon" src={y.icon} className="v-info-icon" />
           <label className="v-info-name"> {y.name}</label>
         </div>
       );
@@ -108,7 +100,7 @@ export const MainFrame = () => {
     return (
       <div className="v-info-main" key={x.primary}>
         <div className="v-info-main-type">
-          <img src={x.icon} className="v-info-icon"></img>
+          <img alt="Icon" src={x.icon} className="v-info-icon"></img>
           <label className="v-info-name">{x.primary}</label>
         </div>
         {subitem}
@@ -121,7 +113,7 @@ export const MainFrame = () => {
       return (
         <div
           className={
-            y.value == target.current.app
+            y.value === target.current.app
               ? "h-info-type h-sub-active"
               : "h-info-type"
           }
@@ -133,7 +125,7 @@ export const MainFrame = () => {
             navigate(url);
           }}
         >
-          <img src={y.icon} className="h-info-icon" />
+          <img alt="Icon" src={y.icon} className="h-info-icon" />
           <div className="h-info-name">{y.name}</div>
         </div>
       );
@@ -145,7 +137,7 @@ export const MainFrame = () => {
     <div className="main-frame">
       <div className="v-bar">
         <div className="logo">
-          <img src={vasion} />
+          <img alt="Icon" src={vasion} />
         </div>
         {ls1}
       </div>
