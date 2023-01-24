@@ -48,6 +48,44 @@ const columns = [
     valueGetter: (params) =>
       `${params.row.firstName || ""} ${params.row.lastName || ""}`,
   },
+  {
+    field: "Under Control",
+    headerName: "Under Control",
+    description: "forbidden",
+    sortable: false,
+    headerClassName: headerClassName,
+    width: 200,
+    headerAlign: "center",
+    // flex: 1,
+    renderCell: (params) => {
+      const onClick = (e) => {};
+      return (
+        <div className="table-row-action-area">
+          <div
+            className="table-row-action-button"
+            style={{ backgroundColor: "#FC7300" }}
+            onClick={onClick}
+          >
+            封号
+          </div>
+          <div
+            className="table-row-action-button"
+            style={{ backgroundColor: "#1F8A70" }}
+            onClick={onClick}
+          >
+            禁言
+          </div>
+          <div
+            className="table-row-action-button"
+            style={{ backgroundColor: "#5867F2" }}
+            onClick={onClick}
+          >
+            限流
+          </div>
+        </div>
+      );
+    },
+  },
 ];
 
 const rows = [

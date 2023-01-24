@@ -26,7 +26,7 @@ export const DetailPage = (props) => {
 
   const data2 = {
     name: "核心指标名称",
-    value: 239421034923,
+    value: 2394210,
     detail: [
       { name: "详细指标1", value: 20392 },
       { name: "详细指标2", value: 1032 },
