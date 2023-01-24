@@ -24,13 +24,24 @@ export const DetailPage = (props) => {
     icon: pie,
   };
 
+  const data2 = {
+    name: "核心指标名称",
+    value: 239421034923,
+    detail: [
+      { name: "详细指标1", value: 20392 },
+      { name: "详细指标2", value: 1032 },
+      { name: "详细指标3", value: 202 },
+    ],
+    icon: pie,
+  };
+
   return (
     <div className="id-detail-wrapper">
       <div className="id-detail-header">
         <SummaryCard className="id-card-type-1 shadow-box" data={data} />
-        <SummaryCard className="id-card-type-2 shadow-box" data={data} />
-        <SummaryCard className="id-card-type-2 shadow-box" data={data} />
-        <SummaryCard className="id-card-type-2 shadow-box" data={data} />
+        <SummaryCard className="id-card-type-2 shadow-box" data={data2} />
+        <SummaryCard className="id-card-type-2 shadow-box" data={data2} />
+        <SummaryCard className="id-card-type-2 shadow-box" data={data2} />
       </div>
       <div className="id-detail-area">
         <SummaryCard className="id-card-type-3 shadow-box" data={data} />
