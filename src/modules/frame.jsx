@@ -152,7 +152,7 @@ export const MainFrame = () => {
           <Route exact path="id/:category/:app/" element={<ChartById />} />
           <Route
             exact
-            path="detail/:id/:category/:app/"
+            path="id/:category/:app/detail/:uid/"
             element={<DetailPage />}
           />
         </Routes>

@@ -280,13 +280,3 @@ html {
   background-color: #5867f280;
   border-left: 3px solid #5865f2;
 }
-
-/* .main-content::before {
-  position: absolute;
-  content: "";
-  top: 70px;
-  left: 8px;
-  height: 100%;
-  width: 100%;
-  border-radius: 10px;
-} */
