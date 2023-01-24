@@ -281,7 +281,7 @@ html {
   border-left: 3px solid #5865f2;
 }
 
-.main-content::before {
+/* .main-content::before {
   position: absolute;
   content: "";
   top: 70px;
@@ -289,4 +289,4 @@ html {
   height: 100%;
   width: 100%;
   border-radius: 10px;
-}
+} */
