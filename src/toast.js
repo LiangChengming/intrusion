@@ -15,7 +15,7 @@ export const succ = (element) => {
 	);
 
 	const style = {
-		position: "top-right",
+		position: "bottom-right",
 		autoClose: 2000,
 		hideProgressBar: false,
 		progressStyle: { backgroundColor: "#5865F2" },
