@@ -31,8 +31,6 @@ export const ChartById = (props) => {
       <SimpleChart type="line" className="simple-chart shadow-box" />
       <SimpleChart type="line" className="simple-chart shadow-box" />
       <Tabular />
-
-      <DetailPage></DetailPage>
     </div>
   );
 };

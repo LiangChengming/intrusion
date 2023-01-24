@@ -1,5 +1,7 @@
 import React, { useRef } from "react";
+import { ToastContainer, toast } from "react-toastify";
 
+import "react-toastify/dist/ReactToastify.css";
 import "./css/common.css";
 import "./css/frame.css";
 import finger from "../assets/id.svg";
@@ -24,6 +26,7 @@ import kuaishou_logo from "../assets/kuaishou.svg";
 import { ChartById } from "./by_id";
 
 import { Routes, Route, useNavigate } from "react-router-dom";
+import { DetailPage } from "./detail";
 
 export const MainFrame = () => {
   const target = useRef({ cate: "phone", app: "weibo" });
@@ -145,10 +148,16 @@ export const MainFrame = () => {
       <div className="main-content">
         <div className="h-sub-bar">{ls2}</div>
         <Routes>
-          <Route exact path="id/:category/:app/" element={<ChartById />} />
           <Route path="/" element={<ChartById />} />
+          <Route exact path="id/:category/:app/" element={<ChartById />} />
+          <Route
+            exact
+            path="detail/:id/:category/:app/"
+            element={<DetailPage />}
+          />
         </Routes>
       </div>
+      <ToastContainer />
     </div>
   );
 };
