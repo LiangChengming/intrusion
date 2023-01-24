@@ -85,26 +85,26 @@ const option = {
       data: mapData,
       zlevel: 3,
     },
-    {
-      name: "bar",
-      type: "effectScatter",
-      animation: false,
-      data: pointData,
-      coordinateSystem: "geo",
-      showEffectOn: "render",
-      rippleEffect: {
-        scale: 3,
-        brushType: "fill",
-      },
-      itemStyle: {
-        normal: {
-          color: "#efe7e5",
-          shadowBlur: 5,
-          shadowColor: "red",
-        },
-      },
-      zlevel: 1,
-    },
+    // {
+    //   name: "bar",
+    //   type: "effectScatter",
+    //   animation: false,
+    //   data: pointData,
+    //   coordinateSystem: "geo",
+    //   showEffectOn: "render",
+    //   rippleEffect: {
+    //     scale: 3,
+    //     brushType: "fill",
+    //   },
+    //   itemStyle: {
+    //     normal: {
+    //       color: "#efe7e5",
+    //       shadowBlur: 5,
+    //       shadowColor: "red",
+    //     },
+    //   },
+    //   zlevel: 1,
+    // },
   ],
 };
 
