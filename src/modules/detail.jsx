@@ -1,4 +1,5 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 
 import "./css/detail.css";
 
@@ -11,9 +12,14 @@ import avatar from "../assets/avatar.png";
 import { SimpleChart } from "./simpleChart";
 import { SummaryCard } from "./summaryCard";
 
+import CalendarHeatmap from "react-calendar-heatmap";
+import "react-calendar-heatmap/dist/styles.css";
+
 import { succ } from "../toast.js";
 
 export const DetailPage = (props) => {
+  let { category, app, uid } = useParams();
+
   const data = {
     name: "核心指标名称",
     value: 239421034923,
@@ -38,9 +44,23 @@ export const DetailPage = (props) => {
     icon: pie,
   };
 
+  const cheatType = () => {
+    if (category === "phone") {
+      return "电话诈骗";
+    }
+    if (category === "person") {
+      return "邪教组织";
+    }
+    if (category === "valient") {
+      return "恐怖暴力";
+    }
+    return "其他问题";
+  };
+
   return (
     <div className="id-detail-wrapper">
       <div className="id-detail-header-info">
+        <div className="account-type">{cheatType()}</div>
         <div className="user-meta-info">
           <img src={avatar} id="avatar" />
           <div className="profile">
@@ -49,6 +69,24 @@ export const DetailPage = (props) => {
             <label id="account-id">29340234920938420</label>
           </div>
         </div>
+
+        <div className="calender">
+          <CalendarHeatmap
+            startDate={new Date("2022-01-01")}
+            endDate={new Date("2023-01-01")}
+            values={[
+              { date: "2023-01-01", count: 12 },
+              { date: "2022-06-10", count: 120 },
+              { date: "2022-02-09", count: 300 },
+              { date: "2022-02-13", count: 800 },
+              { date: "2022-03-09", count: 300 },
+              { date: "2022-07-09", count: 300 },
+              { date: "2022-05-01", count: 12 },
+            ]}
+            style={{ width: "500px", height: "200px" }}
+          />
+        </div>
+
         <div className="buttons">
           <div
             className="table-row-action-button"

@@ -10,6 +10,22 @@
   padding: 30px;
 }
 
+.id-detail-wrapper .account-type {
+  position: absolute;
+  top: 25px;
+  right: -40px;
+  width: 150px;
+  height: 23px;
+  background-color: #1e6823;
+  transform: rotate(45deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #efe7e5;
+  font-weight: bold;
+  font-size: 12px;
+}
+
 .id-detail-wrapper .id-detail-header-info {
   width: 100%;
   height: 150px;
@@ -18,10 +34,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  position: relative;
+  overflow: hidden;
 }
 
 .id-detail-header-info .user-meta-info {
-  width: 500px;
+  width: 300px;
   height: 100%;
   border-radius: 20px;
   overflow: hidden;
@@ -32,6 +51,28 @@
   padding-left: 20px;
   column-gap: 20px;
 }
+
+.react-calendar-heatmap {
+  width: 650px;
+}
+
+.react-calendar-heatmap .color-scale-1 {
+  fill: #d6e685;
+}
+.react-calendar-heatmap .color-scale-2 {
+  fill: #8cc665;
+}
+.react-calendar-heatmap .color-scale-3 {
+  fill: #44a340;
+}
+.react-calendar-heatmap .color-scale-4 {
+  fill: #1e6823;
+}
+
+/* .id-detail-header-info .calender {
+  width: 500px;
+  height: 180px;
+} */
 
 .id-detail-header-info .user-meta-info .profile {
   display: flex;
