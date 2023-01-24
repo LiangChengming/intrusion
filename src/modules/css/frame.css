@@ -4,6 +4,59 @@ html {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+
+  background-color: #7289da;
+  /* background-color: yellowgreen; */
+  background-image: linear-gradient(
+      90deg,
+      transparent 9%,
+      rgba(255, 255, 255, 0.1) 10%,
+      rgba(255, 255, 255, 0.15) 12%,
+      transparent 13%,
+      transparent 29%,
+      rgba(255, 255, 255, 0.1) 30%,
+      rgba(255, 255, 255, 0.1) 31%,
+      transparent 32%,
+      transparent 49%,
+      rgba(255, 255, 255, 0.1) 50%,
+      rgba(255, 255, 255, 0.1) 51%,
+      transparent 52%,
+      transparent 69%,
+      rgba(255, 255, 255, 0.1) 70%,
+      rgba(255, 255, 255, 0.1) 71%,
+      transparent 72%,
+      transparent 89%,
+      rgba(255, 255, 255, 0.1) 90%,
+      rgba(255, 255, 255, 0.1) 91%,
+      transparent 92%,
+      transparent
+    ),
+    linear-gradient(
+      0deg,
+      transparent 9%,
+      rgba(255, 255, 255, 0.1) 10%,
+      rgba(255, 255, 255, 0.15) 12%,
+      transparent 13%,
+      transparent 29%,
+      rgba(255, 255, 255, 0.1) 30%,
+      rgba(255, 255, 255, 0.1) 31%,
+      transparent 32%,
+      transparent 49%,
+      rgba(255, 255, 255, 0.1) 50%,
+      rgba(255, 255, 255, 0.1) 51%,
+      transparent 52%,
+      transparent 69%,
+      rgba(255, 255, 255, 0.1) 70%,
+      rgba(255, 255, 255, 0.1) 71%,
+      transparent 72%,
+      transparent 89%,
+      rgba(255, 255, 255, 0.1) 90%,
+      rgba(255, 255, 255, 0.1) 91%,
+      transparent 92%,
+      transparent
+    );
+
+  background-size: 50px 50px;
 }
 
 ::-webkit-scrollbar {
@@ -41,6 +94,8 @@ html {
   box-sizing: border-box;
   min-width: 800px;
   border-radius: 10px;
+  /* background-color: transparent; */
+  background-color: #00000099;
 }
 
 .main-frame .h-main {
@@ -49,6 +104,8 @@ html {
   justify-content: flex-start;
   flex-direction: column;
   align-items: center;
+
+  background-color: #00000099;
 }
 
 .main-frame .v-bar {
@@ -62,7 +119,8 @@ html {
   flex-direction: column;
   align-items: center;
 
-  background-color: #1e2124;
+  /* background-color: #1e2124; */
+  background-color: #00000099;
   padding-top: 150px;
   min-width: 200px;
   min-height: 600px;
@@ -178,7 +236,10 @@ html {
   align-items: flex-start;
   overflow: hidden;
 
-  background-color: #1e2124;
+  /* background-color: #1e2124; */
+  background-color: transparent;
+  /* background-image: linear-gradient(#5480d3, #3256a7); */
+  position: relative;
 }
 
 .main-frame .h-sub-bar .h-info-type {
@@ -218,4 +279,14 @@ html {
 .main-frame .h-sub-bar .h-sub-active {
   background-color: #5867f280;
   border-left: 3px solid #5865f2;
+}
+
+.main-content::before {
+  position: absolute;
+  content: "";
+  top: 70px;
+  left: 8px;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
 }

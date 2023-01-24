@@ -52,6 +52,7 @@ export const SimpleChart = (props) => {
       option={options}
       className={props.className}
       style={props.style}
+      theme="chalk"
     ></ReactEcharts>
   );
 };

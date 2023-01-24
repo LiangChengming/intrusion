@@ -11,7 +11,7 @@ import { GeoChart } from "./geo_map";
 import { SimpleChart } from "./simpleChart";
 import { useParams } from "react-router-dom";
 import { Tabular } from "./table";
-import { DetailInfo } from "./detail";
+import { DetailPage } from "./detail";
 
 export const ChartById = (props) => {
   let { category, app } = useParams();
@@ -32,7 +32,7 @@ export const ChartById = (props) => {
       <SimpleChart type="line" className="simple-chart shadow-box" />
       <Tabular />
 
-      <DetailInfo></DetailInfo>
+      <DetailPage></DetailPage>
     </div>
   );
 };

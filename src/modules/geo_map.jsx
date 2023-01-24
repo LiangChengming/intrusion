@@ -1,9 +1,5 @@
 import React from "react";
-import echarts from "echarts";
 import ReactEcharts from "echarts-for-react";
-import china from "echarts/map/json/china.json";
-
-echarts.registerMap("china", china);
 
 const mapData = [
   { name: "辽宁", value: 5 },
@@ -52,11 +48,11 @@ const option = {
     zoom: 1.2,
     itemStyle: {
       normal: {
-        areaColor: "#eee",
+        areaColor: "#E7EFE5",
         borderWidth: 0.2,
       },
       emphasis: {
-        areaColor: "#5867F2",
+        areaColor: "#EF9F46",
         shadowOffsetX: 0,
         shadowOffsetY: 0,
         shadowBlur: 20,
@@ -74,9 +70,9 @@ const option = {
     right: 10,
     top: 10,
     seriesIndex: [0],
-    color: ["#FFFFFF", "#CFB813", "#68FB00"],
+    color: ["#FFFFFF", "#7289DA", "#5867F2"],
     textStyle: {
-      color: "#feffff",
+      color: "#00000",
     },
     calculable: false,
     zlevel: 2,
@@ -129,6 +125,7 @@ export const GeoChart = (props) => {
       option={option}
       onEvents={onEvents}
       autoResize={false}
+      theme="chalk"
     />
   );
 };

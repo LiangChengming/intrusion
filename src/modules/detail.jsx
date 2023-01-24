@@ -10,7 +10,7 @@ import pie from "../assets/pie.svg";
 import { SimpleChart } from "./simpleChart";
 import { SummaryCard } from "./summaryCard";
 
-export const DetailInfo = (props) => {
+export const DetailPage = (props) => {
   const data = {
     name: "核心指标名称",
     value: 239421034923,
