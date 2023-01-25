@@ -17,15 +17,8 @@
   /* background-color: #5867f280; */
 }
 
-.MuiPaginationItem-root {
-  color: #efe7e5;
-}
-
-.MuiPagination-root {
-  /* button { */
-  color: red !important;
-  /* } */
-}
+/* .MuiDataGrid-cellCheckbox {
+} */
 
 .table-row-action-area {
   width: 100%;
