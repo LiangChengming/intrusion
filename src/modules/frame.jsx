@@ -24,6 +24,7 @@ import kuaishou_logo from "../assets/kuaishou.svg";
 
 // import gallery from "../assets/gallery.svg";
 import { ChartById } from "./by_id";
+import { TrendSummary } from "./trend";
 
 import { Routes, Route, useNavigate } from "react-router-dom";
 import { DetailPage } from "./detail";
@@ -41,6 +42,7 @@ export const MainFrame = () => {
         { name: "恐怖暴力", value: "valient", icon: valient },
       ],
       icon: finger,
+      catalog: "id",
     },
     {
       primary: "AI智能回复",
@@ -49,6 +51,7 @@ export const MainFrame = () => {
         { name: "其他/Oth", value: "oths", icon: valient },
       ],
       icon: finger,
+      catalog: "trend",
     },
   ];
 
@@ -91,7 +94,7 @@ export const MainFrame = () => {
           key={y.value}
           onClick={(event) => {
             target.current.cate = event.currentTarget.attributes.name.value;
-            const url = `/id/${event.currentTarget.attributes.name.value}/${target.current.app}/`;
+            const url = `/${x.catalog}/${event.currentTarget.attributes.name.value}/${target.current.app}/`;
             navigate(url);
           }}
         >
@@ -149,6 +152,11 @@ export const MainFrame = () => {
         <div className="h-sub-bar">{ls2}</div>
         <Routes>
           <Route path="/" element={<ChartById />} />
+          <Route
+            exact
+            path="trend/:category/:app/"
+            element={<TrendSummary />}
+          />
           <Route exact path="id/:category/:app/" element={<ChartById />} />
           <Route
             exact

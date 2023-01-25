@@ -41,6 +41,7 @@ export const Tabular = (props) => {
             field: "id",
             headerName: "ID",
             width: 100,
+            editable: false,
           },
           {
             field: "firstName",
@@ -73,7 +74,6 @@ export const Tabular = (props) => {
             valueGetter: (params) =>
               `${params.row.firstName || ""} ${params.row.lastName || ""}`,
           },
-          ,
         ];
 
   // 外部业务逻辑需要在table中插入的按钮
