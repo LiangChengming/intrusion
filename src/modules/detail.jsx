@@ -16,9 +16,60 @@ import CalendarHeatmap from "react-calendar-heatmap";
 import "react-calendar-heatmap/dist/styles.css";
 
 import { succ } from "../toast.js";
+import { Tabular } from "./table";
 
 export const DetailPage = (props) => {
   let { category, app, uid } = useParams();
+
+  const txt = {
+    rows: [
+      {
+        id: 1,
+        title: "转发微博: 疫情导致严重经济衰退",
+        time: "2022/09/20",
+        source: "新浪微博",
+      },
+      {
+        id: 2,
+        title: "转发微博: 疫情导致严重经济衰退",
+        time: "2022/09/20",
+        source: "新浪微博",
+      },
+      {
+        id: 3,
+        title: "转发微博: 疫情导致严重经济衰退",
+        time: "2022/09/20",
+        source: "新浪微博",
+      },
+    ],
+    columns: [
+      {
+        field: "id",
+        headerName: "ID",
+        width: 100,
+        sortable: true,
+      },
+      {
+        field: "title",
+        headerName: "Title",
+        width: 100,
+        flex: 1,
+        sortable: true,
+      },
+      {
+        field: "time",
+        headerName: "Date",
+        width: 100,
+        sortable: true,
+      },
+      {
+        field: "source",
+        headerName: "platfrom",
+        width: 100,
+        sortable: true,
+      },
+    ],
+  };
 
   const data = {
     name: "核心指标名称",
@@ -148,6 +199,8 @@ export const DetailPage = (props) => {
           id="id-detail-time-line-chart"
         />
       </div>
+
+      <Tabular rows={txt.rows} columns={txt.columns} />
     </div>
   );
 };

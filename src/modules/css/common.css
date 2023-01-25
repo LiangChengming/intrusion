@@ -4,12 +4,12 @@
   box-shadow: 0 0 3px #000;
 }
 
-.data-grid-header-class {
-  background-color: #5867f280;
-}
-
 .MuiDataGrid-sortIcon {
   color: lime;
+}
+
+.MuiDataGrid-columnHeaders {
+  background-color: #5867f280;
 }
 
 .table-row-action-area {
