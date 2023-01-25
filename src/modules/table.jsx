@@ -103,7 +103,7 @@ export const Tabular = (props) => {
       style={{
         padding: "30px",
         color: "#E7EFE599",
-        minHeight: "550px",
+        minHeight: "450px",
         // height: "100%",
         width: "100%",
         backgroundColor: "#00000099",
