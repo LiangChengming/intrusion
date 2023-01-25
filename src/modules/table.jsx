@@ -1,5 +1,12 @@
 import * as React from "react";
-import { DataGrid } from "@mui/x-data-grid";
+import {
+  DataGrid,
+  useGridApiContext,
+  useGridSelector,
+  gridPageSelector,
+  gridPageCountSelector,
+} from "@mui/x-data-grid";
+import { Pagination } from "@mui/material";
 
 export const Tabular = (props) => {
   const headerClassName = "data-grid-header-class";
@@ -96,8 +103,8 @@ export const Tabular = (props) => {
       style={{
         padding: "30px",
         color: "#E7EFE599",
-        minHeight: "450px",
-        height: "515px",
+        minHeight: "550px",
+        // height: "100%",
         width: "100%",
         backgroundColor: "#00000099",
         borderRadius: "10px",
@@ -108,6 +115,9 @@ export const Tabular = (props) => {
           backgroundColor: "#5867f250",
           color: "#FFF",
         },
+        "& .MuiPaginationItem-root": {
+          color: "#fff",
+        },
       }}
       rowSpacingType="margin"
       density="compact"
@@ -115,6 +125,23 @@ export const Tabular = (props) => {
       autoPageSize={false}
       getCellClassName={() => "data-grid-cell-class"}
       getRowClassName={() => "data-grid-row-class"}
+      hideFooterPagination={false}
+      components={{
+        Pagination: () => {
+          const apiRef = useGridApiContext();
+          const page = useGridSelector(apiRef, gridPageSelector);
+          const pageCount = useGridSelector(apiRef, gridPageCountSelector);
+          return (
+            <Pagination
+              count={pageCount}
+              color="primary"
+              onChange={(event, value) => {
+                apiRef.current.setPage(value - 1);
+              }}
+            />
+          );
+        },
+      }}
     />
   );
 };
