@@ -1,16 +1,14 @@
 .shadow-box {
-  background-color: #00000099;
   border-radius: 10px;
   box-shadow: 0 0 3px #000;
 }
 
 .MuiDataGrid-sortIcon {
-  color: lime;
 }
 
 .MuiDataGrid-columnHeaders {
-  background-color: #5867f280;
-  color: #fff;
+  /* background-color: #5867f280; */
+  /* color: #fff; */
 }
 
 .MuiDataGrid-footerContainer {
@@ -32,7 +30,6 @@
   width: 50px;
   height: 20px;
   border-radius: 5px;
-  color: #efe7e5;
   text-align: center;
   margin-left: 10px;
   cursor: pointer;

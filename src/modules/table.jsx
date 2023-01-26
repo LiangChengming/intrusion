@@ -83,7 +83,6 @@ export const Tabular = (props) => {
       headerName: "Under Control",
       description: "forbidden",
       sortable: false,
-      // headerClassName: headerClassName,
       width: 260,
       headerAlign: "center",
       // flex: 1,
@@ -97,26 +96,25 @@ export const Tabular = (props) => {
       columns={columns}
       pageSize={10}
       // rowsPerPageOptions={[10]}
-      // checkboxSelection
+      checkboxSelection
       disableSelectionOnClick
       experimentalFeatures={{ newEditingApi: true }}
       style={{
-        padding: "30px",
-        color: "#E7EFE599",
+        padding: "60px 30px 30px 30px",
+        height: "550px",
         minHeight: "450px",
-        // height: "100%",
         width: "100%",
-        backgroundColor: "#00000099",
+        backgroundColor: "#E6E6E640",
         borderRadius: "10px",
         border: 0,
       }}
       sx={{
         "& .MuiDataGrid-row:hover": {
-          backgroundColor: "#5867f250",
-          color: "#FFF",
+          // backgroundColor: "#1E1E1E",
+          // color: "#FFF",
         },
         "& .MuiPaginationItem-root": {
-          color: "#fff",
+          color: "#1a1a1a",
         },
       }}
       rowSpacingType="margin"
@@ -134,7 +132,8 @@ export const Tabular = (props) => {
           return (
             <Pagination
               count={pageCount}
-              color="primary"
+              color="standard"
+              // variant="outlined"
               onChange={(event, value) => {
                 apiRef.current.setPage(value - 1);
               }}

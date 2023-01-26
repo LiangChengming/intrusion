@@ -35,21 +35,21 @@ export const ChartById = (props) => {
       <div className="table-row-action-area">
         <a
           className="table-row-action-button"
-          style={{ backgroundColor: "#FC7300" }}
+          // style={{ backgroundColor: "#FC7300" }}
           onClick={onClick}
         >
           封号
         </a>
         <a
           className="table-row-action-button"
-          style={{ backgroundColor: "#1F8A70" }}
+          // style={{ backgroundColor: "#1F8A70" }}
           onClick={onClick}
         >
           禁言
         </a>
         <a
           className="table-row-action-button"
-          style={{ backgroundColor: "#5867F2" }}
+          // style={{ backgroundColor: "#5867F2" }}
           onClick={onClick}
         >
           限流
@@ -57,7 +57,7 @@ export const ChartById = (props) => {
 
         <a
           className="table-row-action-button"
-          style={{ backgroundColor: "#FFF", color: "#000" }}
+          // style={{ backgroundColor: "#FF9500", color: "#FFF" }}
           onClick={navito}
         >
           详情
@@ -68,16 +68,18 @@ export const ChartById = (props) => {
 
   return (
     <div className="id-chart-wrapper">
-      <GeoChart className="geo-chart bg-neutral-green " />
+      <div className="w-full flex justify-start align-middle gap-2 px-5">
+        <SimpleChart type="line" className="simple-chart bg-shade-gray/20" />
+        <SimpleChart type="hbar" className="simple-chart bg-shade-gray/20" />
+      </div>
+      <div className="w-full flex justify-start align-middle gap-2 px-5">
+        <SimpleChart type="line" className="simple-chart bg-shade-gray/20" />
+        <GeoChart className="geo-chart bg-shade-gray/20" />
+      </div>
 
-      <SimpleChart
-        type="hbar"
-        id="city-bar"
-        className="simple-chart shadow-box"
-      />
-      <SimpleChart type="line" className="simple-chart shadow-box" />
-      <SimpleChart type="line" className="simple-chart shadow-box" />
-      <Tabular buttons={table_actions} />
+      <div className="w-full flex justify-start align-middle gap-2 px-5">
+        <Tabular buttons={table_actions} />
+      </div>
     </div>
   );
 };

@@ -66,21 +66,21 @@ export const TrendSummary = (props) => {
         <div className="table-row-action-area">
           <a
             className="table-row-action-button"
-            style={{ backgroundColor: "#FC7300" }}
+            // style={{ backgroundColor: "#FC7300" }}
             onClick={onClick}
           >
             删除
           </a>
           <a
             className="table-row-action-button"
-            style={{ backgroundColor: "#1F8A70" }}
+            // style={{ backgroundColor: "#1F8A70" }}
             onClick={onClick}
           >
             暂停
           </a>
           <a
             className="table-row-action-button"
-            style={{ backgroundColor: "#5867F2" }}
+            // style={{ backgroundColor: "#5867F2" }}
             onClick={onClick}
           >
             限流
@@ -117,26 +117,26 @@ export const TrendSummary = (props) => {
   return (
     <div className="trend-wrapper">
       <div className="trend-summary-info">
-        <SummaryCard className="id-card-type-1 shadow-box" data={data} />
-        <SummaryCard className="id-card-type-2 shadow-box" data={data2} />
-        <SummaryCard className="id-card-type-2 shadow-box" data={data2} />
-        <SummaryCard className="id-card-type-2 shadow-box" data={data2} />
+        <SummaryCard className="id-card-type-1 bg-shade-gray/20" data={data} />
+        <SummaryCard className="id-card-type-2 bg-shade-gray/20" data={data2} />
+        <SummaryCard className="id-card-type-2 bg-shade-gray/20" data={data2} />
+        <SummaryCard className="id-card-type-2 bg-shade-gray/20" data={data2} />
       </div>
       <div className="trend-summary-info">
-        <GeoChart className="geo-chart shadow-box" />
-        <SimpleChart
-          type="pie"
-          className="shadow-box trend-pie-chart"
-          id="trend-pie-chart"
-        />
-      </div>
-      <div className="trend-summary-info">
-        <SummaryCard className="id-card-type-3 shadow-box" data={data} />
+        <SummaryCard className="id-card-type-3 bg-shade-gray/20" data={data} />
         <SimpleChart
           type="line"
-          className="shadow-box trend-timeline-chart"
-          id="trend-detail-time-line-chart"
+          className="trend-timeline-chart bg-shade-gray/20"
         />
+      </div>
+
+      <div className="trend-summary-info">
+        <SimpleChart
+          type="pie"
+          className="trend-pie-chart bg-shade-gray/20"
+          id="trend-pie-chart"
+        />
+        <GeoChart className="geo-chart bg-shade-gray/20" />
       </div>
       <Tabular
         rows={txt.rows}

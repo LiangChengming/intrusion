@@ -30,9 +30,9 @@ const option = {
     map: "china",
     label: {
       normal: {
-        show: true,
+        show: false,
         textStyle: {
-          color: "#000",
+          color: "#1a1a1a",
           fontSize: 9,
         },
       },
@@ -70,7 +70,7 @@ const option = {
     right: 10,
     top: 10,
     seriesIndex: [0],
-    color: ["#FFFFFF", "#7289DA", "#5867F2"],
+    color: ["#FFFFFF", "#CEE3C3", "#97C47E", "#4B8F27"],
     textStyle: {
       color: "#00000",
     },

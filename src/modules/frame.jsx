@@ -140,8 +140,8 @@ export const MainFrame = () => {
   });
 
   return (
-    <div className="main-frame">
-      <div className="v-bar">
+    <div className="main-frame bg-shade-white">
+      <div className="v-bar bg-shade-black text-shade-gray">
         <div className="logo">
           <img alt="Icon" src={vasion} />
         </div>

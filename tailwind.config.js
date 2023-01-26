@@ -6,11 +6,12 @@ module.exports = {
       colors: {
         neutral: {
           green: "#A7B3A1",
-          blue: "#A1A4B3",
+          blue: "#E3E7FC",
           red: "#B3A1A1",
           orange: "#B3ACA1",
-          yellow: "#B3B3A1",
-          purple: "#ACA1B3"
+          yellow: "#FCFCE3",
+          purple: "#ACA1B3",
+          cyan: "#E3F8FC"
         },
         pastel: {
           green: "#CEE3C3",
@@ -46,9 +47,11 @@ module.exports = {
         },
         shade: {
           black: "#1A1A1A",
-          white: "#E6E6E6"
+          gray: "#E6E6E6",
+          white: "#fefefe"
         }
-      }
+      },
+      primary: "#E6E6E6"
     },
   },
   plugins: [],

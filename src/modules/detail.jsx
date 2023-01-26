@@ -111,7 +111,7 @@ export const DetailPage = (props) => {
 
   return (
     <div className="id-detail-wrapper">
-      <div className="id-detail-header-info">
+      <div className="id-detail-header-info  bg-shade-gray/20">
         <div className="account-type">{cheatType()}</div>
         <div className="user-meta-info">
           <img src={avatar} id="avatar" />
@@ -141,9 +141,8 @@ export const DetailPage = (props) => {
 
         <div className="buttons">
           <div
-            className="table-row-action-button"
+            className="table-row-action-button bg-shade-black text-shade-white"
             style={{
-              backgroundColor: "#FC7300",
               width: "100px",
               height: "60px",
             }}
@@ -156,9 +155,8 @@ export const DetailPage = (props) => {
           </div>
 
           <div
-            className="table-row-action-button"
+            className="table-row-action-button bg-shade-black text-shade-white"
             style={{
-              backgroundColor: "#1F8A70",
               width: "100px",
               height: "60px",
             }}
@@ -171,9 +169,8 @@ export const DetailPage = (props) => {
           </div>
 
           <div
-            className="table-row-action-button"
+            className="table-row-action-button bg-shade-black text-shade-white"
             style={{
-              backgroundColor: "#5867F2",
               width: "100px",
               height: "60px",
             }}
@@ -186,18 +183,26 @@ export const DetailPage = (props) => {
           </div>
         </div>
       </div>
-      <div className="id-detail-stat-info">
-        <SummaryCard className="id-card-type-1 shadow-box" data={data} />
-        <SummaryCard className="id-card-type-2 shadow-box" data={data2} />
-        <SummaryCard className="id-card-type-2 shadow-box" data={data2} />
-        <SummaryCard className="id-card-type-2 shadow-box" data={data2} />
+      <div className="id-detail-stat-info rounded-md">
+        <SummaryCard
+          className="id-card-type-1 bg-neutral-yellow/50"
+          data={data}
+        />
+        <SummaryCard
+          className="id-card-type-2 bg-neutral-blue/30"
+          data={data2}
+        />
+        <SummaryCard className="id-card-type-2 bg-neon-green/10" data={data2} />
+        <SummaryCard
+          className="id-card-type-2 bg-neutral-cyan/95"
+          data={data2}
+        />
       </div>
       <div className="id-detail-area">
-        <SummaryCard className="id-card-type-3 shadow-box" data={data} />
+        <SummaryCard className="id-card-type-3 bg-shade-gray/40" data={data} />
         <SimpleChart
           type="line"
-          className="shadow-box id-timeline-chart"
-          id="id-detail-time-line-chart"
+          className="id-timeline-chart bg-shade-gray/20"
         />
       </div>
 

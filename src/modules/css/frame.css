@@ -9,9 +9,9 @@ html {
   margin: 0;
   box-sizing: border-box;
 
-  background-color: #7289da;
-  /* background-color: yellowgreen; */
-  background-image: linear-gradient(
+  /* 网格线  */
+  /* background-color: #7289da; */
+  /* background-image: linear-gradient(
       90deg,
       transparent 9%,
       rgba(255, 255, 255, 0.1) 10%,
@@ -58,9 +58,8 @@ html {
       rgba(255, 255, 255, 0.1) 91%,
       transparent 92%,
       transparent
-    );
-
-  background-size: 50px 50px;
+    ); */
+  /* background-size: 50px 50px; */
 }
 
 ::-webkit-scrollbar {
@@ -98,7 +97,7 @@ html {
   box-sizing: border-box;
   min-width: 800px;
   /* background-color: transparent; */
-  background-color: #00000099;
+  /* background-color: #00000099; */
 }
 
 .main-frame .h-main {
@@ -108,7 +107,7 @@ html {
   flex-direction: column;
   align-items: center;
 
-  background-color: #00000099;
+  /* background-color: #00000099; */
 }
 
 .main-frame .v-bar {
@@ -123,7 +122,7 @@ html {
   align-items: center;
 
   /* background-color: #1e2124; */
-  background-color: #00000099;
+  /* background-color: #00000099; */
   padding-top: 150px;
   min-width: 200px;
   min-height: 600px;
@@ -161,7 +160,7 @@ html {
 }
 
 .main-frame .v-info-main-type .v-info-name {
-  color: #e7efe5;
+  /* color: #e7efe5; */
   font-size: 20px;
   width: 100px;
   min-width: 100px;
@@ -202,7 +201,7 @@ html {
 
 .main-frame .v-info-type .v-info-name {
   cursor: pointer;
-  color: #e7efe5;
+  /* color: #e7efe5; */
   font-size: 13px;
   width: 100px;
   min-width: 100px;
@@ -258,7 +257,7 @@ html {
 }
 
 .main-frame .h-sub-bar .h-info-type:hover {
-  background-color: #5865f2;
+  background-color: #fcfce3;
 }
 
 .main-frame .h-sub-bar .h-info-type .h-info-icon {
@@ -269,7 +268,7 @@ html {
 
 .main-frame .h-sub-bar .h-info-type .h-info-name {
   cursor: pointer;
-  color: #e7efe5;
+  /* color: #e7efe5; */
   font-size: 13px;
   padding-left: 5px;
   text-overflow: hidden;
@@ -280,6 +279,6 @@ html {
 }
 
 .main-frame .h-sub-bar .h-sub-active {
-  background-color: #5867f280;
-  border-left: 3px solid #5865f2;
+  background-color: #fcfce3;
+  /* border-left: 3px solid #5865f2; */
 }

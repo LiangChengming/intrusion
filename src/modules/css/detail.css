@@ -18,21 +18,21 @@
   right: -40px;
   width: 150px;
   height: 23px;
-  background-color: #1e6823;
+  /* background-color: #1e6823; */
   transform: rotate(45deg);
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #efe7e5;
+  /* color: #efe7e5; */
   font-weight: bold;
   font-size: 12px;
 }
 
 .id-detail-wrapper .id-detail-header-info {
   width: 100%;
-  height: 150px;
+  height: 300px;
   min-height: 150px;
-  background-color: #00000090;
+  /* background-color: #00000090; */
   border-radius: 10px;
   display: flex;
   justify-content: space-between;
@@ -56,7 +56,7 @@
 }
 
 .react-calendar-heatmap {
-  width: 650px;
+  width: 800px;
 }
 
 .react-calendar-heatmap .color-scale-1 {
@@ -72,17 +72,12 @@
   fill: #1e6823;
 }
 
-/* .id-detail-header-info .calender {
-  width: 500px;
-  height: 180px;
-} */
-
 .id-detail-header-info .user-meta-info .profile {
   display: flex;
   flex-direction: column;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  color: #fff;
+  /* color: #fff; */
 }
 
 .id-detail-header-info .user-meta-info .profile #account-name {
@@ -93,20 +88,20 @@
 .id-detail-header-info .user-meta-info .profile #account-id {
   padding-top: 5px;
   font-size: 10px;
-  color: #777;
+  /* color: #777; */
 }
 
 .id-detail-header-info .user-meta-info .profile #register-date {
   padding-top: 20px;
   font-size: 10px;
-  color: #777;
+  /* color: #777; */
 }
 
 .id-detail-header-info .user-meta-info #avatar {
   object-fit: cover;
-  width: 120px;
-  height: 120px;
-  border: 3px solid #fff;
+  width: 200px;
+  height: 200px;
+  /* border: 3px solid #fff; */
   border-radius: 50%;
 }
 
@@ -114,12 +109,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 500px;
+  width: 300px;
 }
 
 .id-detail-wrapper .id-detail-stat-info {
   box-sizing: border-box;
-  column-gap: 1%;
   width: 100%;
   height: 300px;
   display: flex;
@@ -129,7 +123,6 @@
 
 .id-detail-area {
   box-sizing: border-box;
-  column-gap: 1%;
   width: 100%;
   height: 300px;
   display: flex;
@@ -139,6 +132,6 @@
 
 .id-timeline-chart {
   box-sizing: border-box;
-  padding: 50px 10px 10px 10px;
-  width: 80%;
+  padding: 60px 10px 10px 10px;
+  width: 100%;
 }

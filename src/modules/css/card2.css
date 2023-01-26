@@ -1,13 +1,7 @@
 .id-card-type-2 {
   box-sizing: border-box;
-  width: 23%;
+  width: 20%;
   height: 100%;
-  /* background: linear-gradient(
-    150deg,
-    rgba(63, 94, 251, 0.5) 0%,
-    rgba(111, 7, 168, 0.3) 95%
-  ); */
-  color: #fff;
   padding: 10px;
 }
 
@@ -22,7 +16,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #000;
 }
 
 .id-card-type-2 .top-info .card-name {
@@ -74,7 +68,6 @@
 
   font-size: 12px;
   font-weight: bold;
-  color: #ccc;
 }
 
 /* .id-card-type-2 .bottom-info .detail-item:nth-child(3) {
@@ -84,5 +77,4 @@
 .id-card-type-2 .bottom-info .detail-value {
   font-size: 13px;
   font-weight: bold;
-  color: #fff;
 }
