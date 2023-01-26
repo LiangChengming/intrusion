@@ -68,7 +68,7 @@ export const ChartById = (props) => {
 
   return (
     <div className="id-chart-wrapper">
-      <GeoChart className="geo-chart shadow-box" />
+      <GeoChart className="geo-chart bg-neutral-green " />
 
       <SimpleChart
         type="hbar"

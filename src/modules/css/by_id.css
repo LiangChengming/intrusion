@@ -21,7 +21,7 @@
   width: 49%;
   min-height: 200px;
   max-height: 800px;
-  background-color: #00000099;
+  /* background-color: #00000099; */
 }
 
 .id-chart-wrapper #city-bar {
