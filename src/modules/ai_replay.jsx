@@ -17,7 +17,7 @@ export const AiReplayPage = (props) => {
   var poster = [];
   for (var i = 0; i < 10; i++) {
     poster.push(
-      <div className="h-[200px] bg-white p-2 m-2 box-border">
+      <div className="h-[220px] min-h-[220px] bg-white p-2 m-2 box-border">
         <div className=" w-full flex justify-between items-center">
           <div className="flex justify-start items-center">
             <img
