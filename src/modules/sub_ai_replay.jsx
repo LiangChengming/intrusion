@@ -102,12 +102,15 @@ export const SubAiReplayPage = (props) => {
               {level2comments}
             </div>
           </div>
-          <div className=" absolute top-2 right-4">{replayBtn}</div>
+          <div className=" absolute top-2 right-0">{replayBtn}</div>
         </div>
       );
     }
     comments.push(
-      <div className="m-2 bg-white flex p-5 justify-start flex-col " key={i}>
+      <div
+        className="mt-2 mx-4 bg-white flex p-5 justify-start flex-col "
+        key={i}
+      >
         {subcomments}
       </div>
     );
