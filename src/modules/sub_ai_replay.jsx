@@ -60,7 +60,7 @@ export const SubAiReplayPage = (props) => {
   );
 
   var comments = [];
-  for (var j = 0; j < 3; j++) {
+  for (var j = 0; j < 10; j++) {
     var subcomments = [];
     for (var i = 0; i < fakes.length; i++) {
       const fake = fakes[i];
@@ -69,7 +69,7 @@ export const SubAiReplayPage = (props) => {
       for (var k = 0; k < fake.subreplays.length; k++) {
         const subfake = fake.subreplays[k];
         level2comments.push(
-          <div className="mt-2 flex justify-between items-start w-[650px] hover:bg-earth-green/10">
+          <div className="mt-2 flex justify-between items-start w-[646px] hover:bg-earth-green/10">
             <div className="">
               <div className="flex justify-start items-center text-xs">
                 <label className=" text-neon-red">{subfake.nickname}:</label>
@@ -117,12 +117,12 @@ export const SubAiReplayPage = (props) => {
   }
 
   return (
-    <div className="w-full h-full flex justify-start items-center">
-      <div className="w-[800px] min-w-[800px] bg-shade-gray/50 h-full">
+    <div className="w-full h-full flex justify-start items-center ">
+      <div className="w-[800px] min-w-[800px] bg-shade-gray/50 h-full overflow-auto">
         {comments}
       </div>
-      <div className="w-full h-full">
-        <Tabular autoHeight="100%" />
+      <div className="w-full h-full box-border">
+        <Tabular autoHeight="calc(100% - 40px)" />
       </div>
     </div>
   );
