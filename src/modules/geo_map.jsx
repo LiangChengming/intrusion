@@ -25,89 +25,6 @@ export const pointData = [
   { name: "point5", value: [119.57, 39.95, 30] },
 ];
 
-const option = {
-  geo: {
-    map: "china",
-    label: {
-      normal: {
-        show: false,
-        textStyle: {
-          color: "#1a1a1a",
-          fontSize: 9,
-        },
-      },
-      emphasis: {
-        show: true,
-        textStyle: {
-          color: "#feffff",
-          fontSize: 10,
-        },
-      },
-    },
-    roam: false,
-    zoom: 1.2,
-    itemStyle: {
-      normal: {
-        areaColor: "#E7EFE5",
-        borderWidth: 0.2,
-      },
-      emphasis: {
-        areaColor: "#EF9F46",
-        shadowOffsetX: 0,
-        shadowOffsetY: 0,
-        shadowBlur: 20,
-        borderWidth: 0,
-        // shadowColor: "rgba(0, 0, 0, 0.5)",
-      },
-    },
-    zlevel: 1,
-  },
-  visualMap: {
-    show: false,
-    type: "continuous",
-    min: 0,
-    max: 100,
-    right: 10,
-    top: 10,
-    seriesIndex: [0],
-    color: ["#FFFFFF", "#CEE3C3", "#97C47E", "#4B8F27"],
-    textStyle: {
-      color: "#00000",
-    },
-    calculable: false,
-    zlevel: 2,
-  },
-  series: [
-    {
-      name: "foo",
-      type: "map",
-      geoIndex: 0,
-      data: mapData,
-      zlevel: 3,
-    },
-    // {
-    //   name: "bar",
-    //   type: "effectScatter",
-    //   animation: false,
-    //   data: pointData,
-    //   coordinateSystem: "geo",
-    //   showEffectOn: "render",
-    //   rippleEffect: {
-    //     scale: 3,
-    //     brushType: "fill",
-    //   },
-    //   itemStyle: {
-    //     normal: {
-    //       color: "#efe7e5",
-    //       shadowBlur: 5,
-    //       shadowColor: "red",
-    //     },
-    //   },
-    //   zlevel: 1,
-    // },
-  ],
-};
-
 const onEvents = {
   click: (params) => {
     const { seriesIndex, data } = params;
@@ -118,14 +35,113 @@ const onEvents = {
 };
 
 export const GeoChart = (props) => {
+  var data = mapData;
+  if (props.data != undefined) {
+    data = props.data;
+  }
+
+  const values = data.map((i) => i.value);
+  var minValue = Math.min(...values);
+  var maxValue = Math.max(...values);
+
+  console.log("min=", minValue);
+  console.log("max=", maxValue);
+
+  console.log("data=", data);
+
+  const option = {
+    geo: {
+      map: "china",
+      label: {
+        normal: {
+          show: false,
+          textStyle: {
+            color: "#1a1a1a",
+            fontSize: 9,
+          },
+        },
+        emphasis: {
+          show: true,
+          textStyle: {
+            color: "#feffff",
+            fontSize: 10,
+          },
+        },
+      },
+      roam: false,
+      zoom: 1.2,
+      itemStyle: {
+        normal: {
+          areaColor: "#E7EFE5",
+          borderWidth: 0.2,
+        },
+        emphasis: {
+          areaColor: "#EF9F46",
+          shadowOffsetX: 0,
+          shadowOffsetY: 0,
+          shadowBlur: 20,
+          borderWidth: 0,
+          // shadowColor: "rgba(0, 0, 0, 0.5)",
+        },
+      },
+      zlevel: 1,
+    },
+    visualMap: {
+      show: true,
+      type: "continuous",
+      min: minValue,
+      max: maxValue,
+      right: 10,
+      top: 10,
+      seriesIndex: [0],
+      color: ["#FFFFFF", "#CEE3C3", "#97C47E", "#4B8F27"],
+      textStyle: {
+        color: "#00000",
+      },
+      calculable: true,
+      zlevel: 2,
+    },
+    series: [
+      {
+        name: "foo",
+        type: "map",
+        geoIndex: 0,
+        data: data,
+        zlevel: 3,
+      },
+      // {
+      //   name: "bar",
+      //   type: "effectScatter",
+      //   animation: false,
+      //   data: pointData,
+      //   coordinateSystem: "geo",
+      //   showEffectOn: "render",
+      //   rippleEffect: {
+      //     scale: 3,
+      //     brushType: "fill",
+      //   },
+      //   itemStyle: {
+      //     normal: {
+      //       color: "#efe7e5",
+      //       shadowBlur: 5,
+      //       shadowColor: "red",
+      //     },
+      //   },
+      //   zlevel: 1,
+      // },
+    ],
+  };
+
   return (
-    <ReactEcharts
-      className={props.className}
-      style={props.style}
-      option={option}
-      onEvents={onEvents}
-      autoResize={false}
-      theme="chalk"
-    />
+    <div className={props.className}>
+      <div className=" absolute top-5 left-10 font-bold">{props.title}</div>
+      <ReactEcharts
+        style={{ padding: "10px" }}
+        option={option}
+        onEvents={onEvents}
+        autoResize={false}
+        theme="chalk"
+      />
+    </div>
   );
 };

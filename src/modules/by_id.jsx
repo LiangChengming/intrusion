@@ -2,7 +2,7 @@ import React from "react";
 
 // import geo from "../assets/geo.svg";
 // import badguy from "../assets/badguy.svg";
-// import { id_list } from "./core_data.js";
+import { id_list, region_counts, sex_counts, age_counts } from "./core_data.js";
 
 import "./css/by_id.css";
 import "./css/common.css";
@@ -19,7 +19,64 @@ export const ChartById = (props) => {
   const navigate = useNavigate();
 
   // TODO 根据category和app查询数据，并渲染实际数据
-  console.log("inf=", { category, app });
+  // console.log("inf=", { category, app });
+  console.log(id_list);
+
+  const tbdata = {
+    rows: id_list,
+    columns: [
+      {
+        // field: "id",
+        headerName: "账号信息",
+        width: 250,
+        editable: false,
+        renderCell: (params) => {
+          console.log("avatar=", params.row);
+          const rowval = params.row;
+          return (
+            <div className="w-[400px] flex justify-start items-center">
+              <img
+                src={rowval.avatar}
+                key={rowval.id}
+                alt=""
+                style={{
+                  width: "30px",
+                  height: "30px",
+                  borderRadius: "5px",
+                }}
+              ></img>
+              <label style={{ paddingLeft: "15px" }}>{params.id}</label>
+            </div>
+          );
+        },
+      },
+      {
+        field: "risk",
+        headerName: "风险值",
+        // type: "number",
+        width: 100,
+        editable: true,
+        headerAlign: "left",
+      },
+      {
+        field: "readCount",
+        headerName: "阅读量",
+        // type: "number",
+        width: 100,
+        editable: true,
+        headerAlign: "left",
+      },
+      {
+        field: "interactiveCount",
+        headerName: "交互数量",
+        // type: "number",
+        width: 100,
+        editable: true,
+        headerAlign: "left",
+        flex: 1,
+      },
+    ],
+  };
 
   // 当前页面Table支持的操作
   const table_actions = (rowval) => {
@@ -69,16 +126,47 @@ export const ChartById = (props) => {
   return (
     <div className="id-chart-wrapper">
       <div className="w-full flex justify-start align-middle gap-2 px-5">
-        <SimpleChart type="line" className="simple-chart bg-shade-gray/20" />
-        <SimpleChart type="hbar" className="simple-chart bg-shade-gray/20" />
+        <SimpleChart
+          type="bar"
+          className="simple-chart bg-shade-gray/20"
+          title="性别分布"
+          x={sex_counts.map((i) => i.name)}
+          y={sex_counts.map((i) => i.count)}
+        />
+        <SimpleChart
+          type="hbar"
+          className="simple-chart bg-shade-gray/20"
+          title="地域分布"
+          x={region_counts.map((i) => i.region)}
+          y={region_counts.map((i) => i.count)}
+        />
       </div>
       <div className="w-full flex justify-start align-middle gap-2 px-5">
-        <SimpleChart type="line" className="simple-chart bg-shade-gray/20" />
-        <GeoChart className="geo-chart bg-shade-gray/20" />
+        <SimpleChart
+          type="bar"
+          className="simple-chart bg-shade-gray/20"
+          title="年龄分布"
+          x={age_counts.map((i) => i.name)}
+          y={age_counts.map((i) => i.count)}
+        />
+        <GeoChart
+          className="geo-chart bg-shade-gray/20 relative"
+          data={region_counts.map((e) => {
+            return {
+              name: e.region,
+              value: e.count,
+            };
+          })}
+          title="账号地域分布"
+        />
       </div>
 
       <div className="w-full flex justify-start align-middle gap-2 px-5">
-        <Tabular buttons={table_actions} />
+        <Tabular
+          buttons={table_actions}
+          rows={tbdata.rows}
+          columns={tbdata.columns}
+        />
       </div>
     </div>
   );
