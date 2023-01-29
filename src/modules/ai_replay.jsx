@@ -1,5 +1,6 @@
 import React from "react";
 import avatar from "../assets/avatar.png";
+import { Tabular } from "./table";
 
 export const AiReplayPage = (props) => {
   const fake = {
@@ -45,7 +46,9 @@ export const AiReplayPage = (props) => {
       <div className=" w-[800px] h-full bg-shade-gray overflow-auto">
         {poster}
       </div>
-      <div className=" w-full h-full bg-shade-black/40">{"ok"}</div>
+      <div className=" w-full h-full ">
+        <Tabular />
+      </div>
     </div>
   );
 };
