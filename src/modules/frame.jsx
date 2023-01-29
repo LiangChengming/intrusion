@@ -5,7 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import "./css/common.css";
 import "./css/frame.css";
 import finger from "../assets/id.svg";
-import valient from "../assets/valient.svg";
+import violence from "../assets/valient.svg";
 import person from "../assets/person.svg";
 import phone from "../assets/phone.svg";
 import vasion from "../assets/vasion.svg";
@@ -29,6 +29,7 @@ import { TrendSummary } from "./trend";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import { DetailPage } from "./detail";
 import { ColorPage } from "./palette";
+import { AiReplayPage } from "./ai_replay";
 
 export const MainFrame = () => {
   const target = useRef({ cate: "phone", app: "weibo" });
@@ -40,16 +41,17 @@ export const MainFrame = () => {
       categories: [
         { name: "电话诈骗", value: "phone", icon: phone },
         { name: "邪教组织", value: "person", icon: person },
-        { name: "恐怖暴力", value: "valient", icon: valient },
+        { name: "恐怖暴力", value: "volience", icon: violence },
       ],
       icon: finger,
       catalog: "id",
     },
     {
-      primary: "AI智能回复",
+      primary: "舆论引导",
       categories: [
-        { name: "舆论引导", value: "news", icon: valient },
-        { name: "其他/Oth", value: "oths", icon: valient },
+        { name: "舆情汇总", value: "news", icon: violence },
+        { name: "AI回复", value: "replay", icon: violence },
+        { name: "其他/Oth", value: "oths", icon: violence },
       ],
       icon: finger,
       catalog: "trend",
@@ -158,6 +160,7 @@ export const MainFrame = () => {
             path="trend/:category/:app/"
             element={<TrendSummary />}
           />
+          <Route exact path="trend/replay/:app/" element={<AiReplayPage />} />
           <Route exact path="id/:category/:app/" element={<ChartById />} />
           <Route
             exact
