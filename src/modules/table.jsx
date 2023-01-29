@@ -101,7 +101,7 @@ export const Tabular = (props) => {
       experimentalFeatures={{ newEditingApi: true }}
       style={{
         padding: "60px 30px 30px 30px",
-        height: "550px",
+        height: props.autoHeight != undefined ? props.autoHeight : "550px",
         minHeight: "450px",
         width: "100%",
         backgroundColor: "#E6E6E640",
