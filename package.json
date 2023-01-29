@@ -5,6 +5,7 @@
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
+    "@mui/icons-material": "^5.11.0",
     "@mui/material": "^5.11.5",
     "@mui/system": "^5.4.1",
     "@mui/x-data-grid": "^5.17.20",
@@ -26,8 +27,8 @@
     "build": "yarn build:css && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build:css":"npx tailwindcss -i css/main.css -o public/main.css",
-    "watch:css":"npx tailwindcss -i src/modules/css/frame.css -o public/modules/css/frame.css --watch&"
+    "build:css": "npx tailwindcss -i css/main.css -o public/main.css",
+    "watch:css": "npx tailwindcss -i src/modules/css/frame.css -o public/modules/css/frame.css --watch&"
   },
   "eslintConfig": {
     "extends": [
