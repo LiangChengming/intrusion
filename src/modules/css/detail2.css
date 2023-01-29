@@ -1,0 +1,3 @@
+.detail2-wrapper {
+  @apply flex justify-center align-middle w-full h-full overflow-auto;
+}

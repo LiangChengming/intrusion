@@ -28,6 +28,7 @@ import { TrendSummary } from "./trend";
 
 import { Routes, Route, useNavigate } from "react-router-dom";
 import { DetailPage } from "./detail";
+import { ColorPage } from "./palette";
 
 export const MainFrame = () => {
   const target = useRef({ cate: "phone", app: "weibo" });
@@ -163,6 +164,8 @@ export const MainFrame = () => {
             path="id/:category/:app/detail/:uid/"
             element={<DetailPage />}
           />
+
+          <Route exact path="colors/" element={<ColorPage />} />
         </Routes>
       </div>
       <ToastContainer />
