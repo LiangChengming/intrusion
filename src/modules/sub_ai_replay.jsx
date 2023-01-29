@@ -108,7 +108,7 @@ export const SubAiReplayPage = (props) => {
     }
     comments.push(
       <div
-        className="mt-2 mx-4 bg-white flex p-5 justify-start flex-col "
+        className="mt-2 mx-4 bg-white flex p-5 justify-start flex-col hover:bg-earth-green/10 "
         key={i}
       >
         {subcomments}
