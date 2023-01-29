@@ -30,6 +30,7 @@ import { Routes, Route, useNavigate } from "react-router-dom";
 import { DetailPage } from "./detail";
 import { ColorPage } from "./palette";
 import { AiReplayPage } from "./ai_replay";
+import { SubAiReplayPage } from "./sub_ai_replay";
 
 export const MainFrame = () => {
   const target = useRef({ cate: "phone", app: "weibo" });
@@ -51,6 +52,7 @@ export const MainFrame = () => {
       categories: [
         { name: "舆情汇总", value: "news", icon: violence },
         { name: "AI回复", value: "replay", icon: violence },
+        { name: "评论控制", value: "subreplay", icon: violence },
         { name: "其他/Oth", value: "oths", icon: violence },
       ],
       icon: finger,
@@ -161,6 +163,11 @@ export const MainFrame = () => {
             element={<TrendSummary />}
           />
           <Route exact path="trend/replay/:app/" element={<AiReplayPage />} />
+          <Route
+            exact
+            path="trend/subreplay/:app/"
+            element={<SubAiReplayPage />}
+          />
           <Route exact path="id/:category/:app/" element={<ChartById />} />
           <Route
             exact
