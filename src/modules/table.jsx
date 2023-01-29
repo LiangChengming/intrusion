@@ -118,7 +118,7 @@ export const Tabular = (props) => {
         },
       }}
       rowSpacingType="margin"
-      // density="compact"
+      density="compact"
       autoHeight={true}
       autoPageSize={false}
       getCellClassName={() => "data-grid-cell-class"}
