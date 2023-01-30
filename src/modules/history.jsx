@@ -6,6 +6,7 @@ import {
   ToggleButton,
   Box,
   ToggleButtonGroup,
+  Typography,
 } from "@mui/material";
 import { Tabular } from "./table";
 
@@ -39,7 +40,18 @@ export const HistoryPage = (props) => {
           </ToggleButton>
         </ToggleButtonGroup>
       </Box>
-      <Tabular autoHeight="calc(100% - 5rem)"></Tabular>
+      <Box className=" relative w-full h-full">
+        <Typography className=" absolute top-3 left-20">
+          最新敏感内容
+        </Typography>
+        <Tabular autoHeight="100%"></Tabular>
+      </Box>
+      <Box className=" relative w-full  h-full">
+        <Typography className=" absolute top-3 left-20">
+          全部舆情内容
+        </Typography>
+        <Tabular autoHeight="100%"></Tabular>
+      </Box>
     </Box>
   );
 };
