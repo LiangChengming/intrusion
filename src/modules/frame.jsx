@@ -31,6 +31,7 @@ import { DetailPage } from "./detail";
 import { ColorPage } from "./palette";
 import { AiReplayPage } from "./ai_replay";
 import { SubAiReplayPage } from "./sub_ai_replay";
+import { HistoryPage } from "./history";
 
 export const MainFrame = () => {
   const target = useRef({ cate: "phone", app: "weibo" });
@@ -53,6 +54,7 @@ export const MainFrame = () => {
         { name: "舆情汇总", value: "news", icon: violence },
         { name: "AI回复", value: "replay", icon: violence },
         { name: "评论控制", value: "subreplay", icon: violence },
+        { name: "操作历史", value: "history", icon: violence },
         { name: "其他/Oth", value: "oths", icon: violence },
       ],
       icon: finger,
@@ -168,6 +170,7 @@ export const MainFrame = () => {
             path="trend/subreplay/:app/"
             element={<SubAiReplayPage />}
           />
+          <Route exact path="trend/history/:app/" element={<HistoryPage />} />
           <Route exact path="id/:category/:app/" element={<ChartById />} />
           <Route
             exact
