@@ -14,7 +14,7 @@ import china from "echarts/map/json/china.json";
 import echarts from "echarts";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-console.log("chalk=", chalk_theme);
+// console.log("chalk=", chalk_theme);
 // console.log("pars=", JSON.parse(chalk_theme.toString()));
 
 echarts.registerMap("china", china);

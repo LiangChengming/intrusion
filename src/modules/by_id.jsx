@@ -31,7 +31,7 @@ export const ChartById = (props) => {
         width: 250,
         editable: false,
         renderCell: (params) => {
-          console.log("avatar=", params.row);
+          // console.log("avatar=", params.row);
           const rowval = params.row;
           return (
             <div className="w-[400px] flex justify-start items-center">
