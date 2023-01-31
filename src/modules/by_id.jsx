@@ -1,17 +1,13 @@
 import React from "react";
-
-// import geo from "../assets/geo.svg";
-// import badguy from "../assets/badguy.svg";
-import { id_list, region_counts, sex_counts, age_counts } from "./core_data.js";
-
-import "./css/by_id.css";
-import "./css/common.css";
-
 import { GeoChart } from "./geo_map";
 import { SimpleChart } from "./simpleChart";
 import { useParams, useNavigate } from "react-router-dom";
 import { Tabular } from "./table";
+
 import { succ } from "../toast.js";
+import { id_list, region_counts, sex_counts, age_counts } from "./core_data.js";
+import "./css/by_id.css";
+import "./css/common.css";
 
 export const ChartById = (props) => {
   let { category, app } = useParams();

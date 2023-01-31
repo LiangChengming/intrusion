@@ -14,19 +14,7 @@ function getRandomInt(min, max) {
 }
 
 export const AiReplyPage = (props) => {
-  // const item = {
-  //   name: "item user",
-  //   avatar: avatar,
-  //   lorem:
-  //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius minus quis numquam voluptate temporibus sunt suscipit minima? Velit molestias, iusto dolorum veritatis eligendi et, quas quaerat, exercitationem quidem blanditiis quisquam.",
-  //   share: 30,
-  //   comment: 7,
-  //   like: 18,
-  //   pubtime: "2022/01/30 来自 vivo Y 70s 5G",
-  // };
-
   const [rows, setRows] = useState([]);
-
   var poster = weibo_auto_reply.map((item, i) => {
     return (
       <div
