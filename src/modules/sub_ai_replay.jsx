@@ -1,9 +1,6 @@
 import React from "react";
 import avatar from "../assets/avatar.png";
 import { Tabular } from "./table";
-import ThumbUpOutlinedIcon from "@mui/icons-material/ThumbUpOutlined";
-import IosShareOutlinedIcon from "@mui/icons-material/IosShareOutlined";
-import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutlineOutlined";
 
 export const SubAiReplayPage = (props) => {
   const fakes = [
