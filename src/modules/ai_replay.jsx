@@ -75,9 +75,6 @@ export const AiReplayPage = (props) => {
         {poster}
       </div>
       <div className=" w-full h-full relative ">
-        {/* <div className=" absolute top-5 right-10 w-[200px] h-[40px] bg-earth-green/30 flex justify-center items-center text-shade-black/80 rounded-md z-30 cursor-pointer hover:bg-earth-green">
-          使用选中内容回复
-        </div> */}
         <Tabular autoHeight="calc(100% - 40px)" />
       </div>
     </div>

@@ -34,13 +34,14 @@ import { SubAiReplayPage } from "./sub_ai_replay";
 import { HistoryPage } from "./history";
 
 export const MainFrame = () => {
-  const target = useRef({ cate: "phone", app: "weibo" });
+  const target = useRef({ cate: "1450", app: "weibo" });
   const navigate = useNavigate();
 
   const menus = [
     {
       primary: "ID检测",
       categories: [
+        { name: "1450群体", value: "1450", icon: phone },
         { name: "电话诈骗", value: "phone", icon: phone },
         { name: "邪教组织", value: "person", icon: person },
         { name: "恐怖暴力", value: "volience", icon: violence },
