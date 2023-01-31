@@ -5,6 +5,7 @@ import { GeoChart } from "./geo_map";
 import { SummaryCard } from "./summaryCard";
 import { opinion_all_count, opinion_series_data } from "./core_data.js";
 import ShareIcon from "@mui/icons-material/Share";
+import { PieChart } from "./pieChart";
 
 export const TrendSummary = (props) => {
   var splitByName = {};
@@ -50,7 +51,25 @@ export const TrendSummary = (props) => {
         />
       </div>
       <div className="trend-summary-info">
-        <SimpleChart
+        <PieChart
+          title="24小时舆情"
+          style={{
+            width: "500px",
+            height: "500px",
+            maxWidth: "500px",
+            maxHeight: "500px",
+            minWidth: "500px",
+            minHeight: "500px",
+            backgroundColor: "#eeeeee80",
+          }}
+          data={opinion_all_count
+            .filter((e) => e.name != "整体")
+            .map((e) => ({
+              name: e.name,
+              value: e.count,
+            }))}
+        />
+        {/* <SimpleChart
           type="pie"
           style={{
             height: "500px",
@@ -59,7 +78,7 @@ export const TrendSummary = (props) => {
             width: "500px",
           }}
           className=" bg-shade-gray/20"
-        />
+        /> */}
         <GeoChart
           style={{
             height: "500px",
