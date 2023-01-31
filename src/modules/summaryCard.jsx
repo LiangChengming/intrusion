@@ -6,9 +6,9 @@ export const SummaryCard = (props) => {
       <div className="top-info">
         <div className="card-name">{props.data.name}</div>
         <div className="value-wrapper">
-          {props.data.icon !== undefined && (
-            <img alt="Icon" className="card-icon" src={props.data.icon} />
-          )}
+          {props.data.icon !== undefined &&
+            // <img alt="Icon" className="card-icon" src={props.data.icon} />
+            props.data.icon}
           <div className="card-value">{props.data.value}</div>
         </div>
       </div>

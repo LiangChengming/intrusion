@@ -29,7 +29,7 @@ import { TrendSummary } from "./trend";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import { DetailPage } from "./detail";
 import { ColorPage } from "./palette";
-import { AiReplayPage } from "./ai_replay";
+import { AiReplyPage } from "./ai_replay";
 import { SubAiReplayPage } from "./sub_ai_replay";
 import { HistoryPage } from "./history";
 
@@ -165,7 +165,7 @@ export const MainFrame = () => {
             path="trend/:category/:app/"
             element={<TrendSummary />}
           />
-          <Route exact path="trend/replay/:app/" element={<AiReplayPage />} />
+          <Route exact path="trend/replay/:app/" element={<AiReplyPage />} />
           <Route
             exact
             path="trend/subreplay/:app/"

@@ -6,6 +6,8 @@ import { SummaryCard } from "./summaryCard";
 import { Tabular } from "./table";
 import { succ } from "../toast";
 import pie from "../assets/pie.svg";
+import { opinion_all_count } from "./core_data.js";
+import ShareIcon from "@mui/icons-material/Share";
 
 export const TrendSummary = (props) => {
   const txt = {
@@ -91,42 +93,25 @@ export const TrendSummary = (props) => {
   };
 
   const data = {
-    name: "核心指标名称",
-    value: 239421034923,
-    detail: [
-      { name: "详细指标1", value: 20392 },
-      { name: "详细指标2", value: 1032 },
-      { name: "详细指标3", value: 202 },
-      { name: "详细指标4", value: 9032 },
-      { name: "详细指标5", value: 1234 },
-    ],
-    icon: pie,
-  };
-
-  const data2 = {
-    name: "核心指标名称",
-    value: 2394210,
-    detail: [
-      { name: "详细指标1", value: 20392 },
-      { name: "详细指标2", value: 1032 },
-      { name: "详细指标3", value: 202 },
-    ],
-    icon: pie,
+    name: "整体舆情(过去5天)",
+    value: opinion_all_count[0].count,
+    detail: opinion_all_count.map((x) => {
+      return { name: x.name, value: x.count };
+    }),
+    icon: <ShareIcon />,
   };
 
   return (
     <div className="trend-wrapper">
       <div className="trend-summary-info">
-        <SummaryCard className="id-card-type-1 bg-shade-gray/20" data={data} />
-        <SummaryCard className="id-card-type-2 bg-shade-gray/20" data={data2} />
-        <SummaryCard className="id-card-type-2 bg-shade-gray/20" data={data2} />
-        <SummaryCard className="id-card-type-2 bg-shade-gray/20" data={data2} />
-      </div>
-      <div className="trend-summary-info">
-        <SummaryCard className="id-card-type-3 bg-shade-gray/20" data={data} />
+        <SummaryCard
+          className="id-card-type-3 bg-shade-gray/20 w-1/4"
+          data={data}
+        />
         <SimpleChart
           type="line"
-          className="trend-timeline-chart bg-shade-gray/20"
+          title="舆情时序数据"
+          className="trend-timeline-chart bg-shade-gray/20 w-3/4"
         />
       </div>
 
