@@ -8,6 +8,7 @@
   flex-direction: column;
   padding: 15px;
   row-gap: 10px;
+  overflow-y: scroll;
 }
 
 .trend-wrapper .trend-summary-info {
