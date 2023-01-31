@@ -170,5 +170,5 @@ export const PieChart = (props) => {
     ],
   };
 
-  return <ReactEcharts option={option} style={props.style} />;
+  return <ReactEcharts option={option} style={props.style} theme="chalk" />;
 };
