@@ -81,3 +81,65 @@ export const weibo_auto_reply = [
                    "政府的效果取决于公众的评价，不同的观点是正常的。", 
                    "评价政府的标准是多元的，不能仅仅基于个人观点来评判。"]},
 ]
+
+// 整体舆情
+export const opinion_all_count = [
+    {name: "整体", count: "10000"},
+    {name: "正面", count: "4023"}, 
+    {name: "负面", count: "2056"},
+    {name: "中性", count: "3921"},
+]
+
+// 24小时舆情
+export const opinion_percent_count = [
+    {name: "正面", percent: "40.23%"}, 
+    {name: "负面", percent: "20.56%"},
+    {name: "中性", percent: "39.21%"},
+]
+
+// 舆情时序数据
+export const opinion_series_data = [
+    {time: "1.20", name: "正面", count: "1100"}, 
+    {time: "1.20", name: "负面", count: "2200"},
+    {time: "1.20", name: "中性", count: "3300"},
+    {time: "1.21", name: "正面", count: "2100"}, 
+    {time: "1.21", name: "负面", count: "3200"},
+    {time: "1.21", name: "中性", count: "4300"},
+    {time: "1.22", name: "正面", count: "4100"}, 
+    {time: "1.22", name: "负面", count: "2200"},
+    {time: "1.22", name: "中性", count: "3300"},
+    {time: "1.23", name: "正面", count: "5100"}, 
+    {time: "1.23", name: "负面", count: "1200"},
+    {time: "1.23", name: "中性", count: "2300"},
+    {time: "1.24", name: "正面", count: "6100"}, 
+    {time: "1.24", name: "负面", count: "1200"},
+    {time: "1.24", name: "中性", count: "3300"},
+    {time: "1.25", name: "正面", count: "6100"}, 
+    {time: "1.25", name: "负面", count: "1200"},
+    {time: "1.25", name: "中性", count: "3300"},
+    {time: "1.26", name: "正面", count: "5100"}, 
+    {time: "1.26", name: "负面", count: "2200"},
+    {time: "1.26", name: "中性", count: "4300"},
+    {time: "1.27", name: "正面", count: "2100"}, 
+    {time: "1.27", name: "负面", count: "6200"},
+    {time: "1.27", name: "中性", count: "1300"},
+    {time: "1.28", name: "正面", count: "5100"}, 
+    {time: "1.28", name: "负面", count: "2200"},
+    {time: "1.28", name: "中性", count: "3300"},
+    {time: "1.29", name: "正面", count: "4100"}, 
+    {time: "1.29", name: "负面", count: "3200"},
+    {time: "1.29", name: "中性", count: "7300"},
+]
+
+// 舆情地域数据
+export const opinon_region_counts = [
+    { region: "北京", count: 2000 },
+    { region: "广东", count: 1000 },
+    { region: "湖南", count: 3000 },
+    { region: "辽宁", count: 4000 },
+    { region: "上海", count: 2000 },
+    { region: "浙江", count: 1050 },
+    { region: "西安", count: 1060 },
+    { region: "福建", count: 2060 },
+]
+
