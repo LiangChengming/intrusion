@@ -36,8 +36,22 @@ export const SimpleChart = (props) => {
   }
 
   const options = {
-    // title: [{ text: "大标题", left: "10", top: "-20" }],
-    grid: { top: 20, right: 40, bottom: 20, left: 40, containLabel: true },
+    title: {
+      text: props.title,
+      top: "20px",
+      left: "30px",
+    },
+    calculable: true,
+    legend: {
+      icon: "circle",
+      x: "center",
+      y: "20px",
+      data: seriesData.map((t) => t.name),
+      textStyle: {
+        color: "#000",
+      },
+    },
+    // grid: { top: 20, right: 40, bottom: 20, left: 40, containLabel: true },
     xAxis: props.type !== "hbar" ? categories : valueType,
     yAxis:
       props.type === "hbar"
@@ -55,35 +69,35 @@ export const SimpleChart = (props) => {
             },
           ]
         : valueType,
-    legend: {
-      orient: "horizontal",
-      right: 10,
-      top: "center",
-      icon: "rect",
-      data: [{ name: "line-A", icon: "rect" }],
-    },
-    series: [
-      {
-        data: seriesData,
-        // bar or line
-        type: props.type === "hbar" ? "bar" : props.type,
-        smooth: true,
-      },
-    ],
+    series: !props.hasOwnProperty("multiSerial")
+      ? [
+          {
+            data: seriesData,
+            // bar or line
+            type: props.type === "hbar" ? "bar" : props.type,
+            smooth: true,
+          },
+        ]
+      : seriesData.map((serial) => {
+          return {
+            name: serial.name,
+            data: serial.data,
+            // bar or line
+            type: props.type === "hbar" ? "bar" : props.type,
+            smooth: true,
+          };
+        }),
     tooltip: {
       trigger: "axis",
     },
   };
 
   return (
-    <div className="w-full relative">
-      <div className=" absolute top-5 left-10 font-bold">{props.title}</div>
-      <ReactEcharts
-        option={options}
-        className={props.className}
-        style={props.style}
-        theme="chalk"
-      ></ReactEcharts>
-    </div>
+    <ReactEcharts
+      option={options}
+      className={props.className}
+      style={props.style}
+      theme="chalk"
+    />
   );
 };

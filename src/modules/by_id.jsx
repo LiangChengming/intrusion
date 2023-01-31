@@ -128,14 +128,16 @@ export const ChartById = (props) => {
       <div className="w-full flex justify-start align-middle gap-2 px-5">
         <SimpleChart
           type="bar"
-          className="simple-chart bg-shade-gray/20"
+          className="bg-shade-gray/20"
+          style={{ width: "50%", height: "500px" }}
           title="性别分布"
           x={sex_counts.map((i) => i.name)}
           y={sex_counts.map((i) => i.count)}
         />
         <SimpleChart
           type="hbar"
-          className="simple-chart bg-shade-gray/20"
+          className="bg-shade-gray/20"
+          style={{ width: "50%", height: "500px" }}
           title="地域分布"
           x={region_counts.map((i) => i.region)}
           y={region_counts.map((i) => i.count)}
@@ -144,13 +146,18 @@ export const ChartById = (props) => {
       <div className="w-full flex justify-start align-middle gap-2 px-5">
         <SimpleChart
           type="bar"
-          className="simple-chart bg-shade-gray/20"
+          className="bg-shade-gray/20"
+          style={{ width: "50%", height: "500px" }}
           title="年龄分布"
           x={age_counts.map((i) => i.name)}
           y={age_counts.map((i) => i.count)}
         />
         <GeoChart
-          className="geo-chart bg-shade-gray/20 relative"
+          style={{
+            width: "50%",
+            height: "500px",
+            backgroundColor: "#eeeeee80",
+          }}
           data={region_counts.map((e) => {
             return {
               name: e.region,

@@ -44,12 +44,16 @@ export const GeoChart = (props) => {
   var minValue = Math.min(...values);
   var maxValue = Math.max(...values);
 
-  console.log("min=", minValue);
-  console.log("max=", maxValue);
-
-  console.log("data=", data);
+  // console.log("min=", minValue);
+  // console.log("max=", maxValue);
+  // console.log("data=", data);
 
   const option = {
+    title: {
+      text: props.title,
+      top: "20px",
+      left: "30px",
+    },
     geo: {
       map: "china",
       label: {
@@ -133,15 +137,12 @@ export const GeoChart = (props) => {
   };
 
   return (
-    <div className={props.className}>
-      <div className=" absolute top-5 left-10 font-bold">{props.title}</div>
-      <ReactEcharts
-        style={{ padding: "10px" }}
-        option={option}
-        onEvents={onEvents}
-        autoResize={false}
-        theme="chalk"
-      />
-    </div>
+    <ReactEcharts
+      style={props.style}
+      option={option}
+      onEvents={onEvents}
+      autoResize={true}
+      theme="chalk"
+    />
   );
 };
