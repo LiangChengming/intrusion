@@ -7,9 +7,12 @@ import {
   opinion_all_count,
   opinion_series_data,
   opinon_region_counts,
+  word_freq,
 } from "./core_data.js";
 import ShareIcon from "@mui/icons-material/Share";
 import { PieChart } from "./pieChart";
+import { WordCloudChart } from "./wordcoud";
+import { Tabular } from "./table";
 
 export const TrendSummary = (props) => {
   var splitByName = {};
@@ -73,6 +76,7 @@ export const TrendSummary = (props) => {
               value: e.count,
             }))}
         />
+
         <GeoChart
           style={{
             height: "500px",
@@ -84,6 +88,56 @@ export const TrendSummary = (props) => {
             value: e.count,
           }))}
           title="舆情地域数据"
+        />
+      </div>
+
+      <div className="trend-summary-info">
+        <WordCloudChart
+          style={{
+            width: "500px",
+            height: "500px",
+            maxWidth: "500px",
+            maxHeight: "500px",
+            minWidth: "500px",
+            minHeight: "500px",
+            backgroundColor: "#eeeeee80",
+          }}
+          data={word_freq.map((e) => ({ name: e.text, value: e.value }))}
+        />
+        <Tabular
+          style={{
+            width: "100%",
+            height: "500px",
+            maxHeight: "500px",
+            backgroundColor: "#eeeeee80",
+          }}
+          autoHeight="500px"
+          rows={word_freq.map((e, i) => ({
+            text: e.text,
+            id: i,
+            value: e.value,
+          }))}
+          columns={[
+            {
+              field: "id",
+              headerName: "关键字",
+              sortable: true,
+              width: 100,
+            },
+            {
+              field: "text",
+              headerName: "关键字",
+              sortable: true,
+              width: 100,
+            },
+            {
+              field: "value",
+              headerName: "频次",
+              sortable: true,
+              // width: 300,
+              flex: 1,
+            },
+          ]}
         />
       </div>
     </div>

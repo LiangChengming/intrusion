@@ -94,7 +94,7 @@ export const Tabular = (props) => {
     <DataGrid
       rows={rows}
       columns={columns}
-      pageSize={10}
+      pageSize={9}
       // rowsPerPageOptions={[10]}
       checkboxSelection
       disableSelectionOnClick
