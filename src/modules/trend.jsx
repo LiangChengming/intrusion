@@ -3,7 +3,11 @@ import "./css/trend.css";
 import { SimpleChart } from "./simpleChart";
 import { GeoChart } from "./geo_map";
 import { SummaryCard } from "./summaryCard";
-import { opinion_all_count, opinion_series_data } from "./core_data.js";
+import {
+  opinion_all_count,
+  opinion_series_data,
+  opinon_region_counts,
+} from "./core_data.js";
 import ShareIcon from "@mui/icons-material/Share";
 import { PieChart } from "./pieChart";
 
@@ -85,6 +89,11 @@ export const TrendSummary = (props) => {
             width: "100%",
             backgroundColor: "#eeeeee80",
           }}
+          data={opinon_region_counts.map((e) => ({
+            name: e.region,
+            value: e.count,
+          }))}
+          title="舆情地域数据"
         />
       </div>
     </div>
