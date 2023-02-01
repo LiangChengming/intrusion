@@ -120,7 +120,7 @@ export const TrendSummary = (props) => {
           columns={[
             {
               field: "id",
-              headerName: "关键字",
+              headerName: "ID",
               sortable: true,
               width: 100,
             },
