@@ -32,16 +32,37 @@ export const region_counts = [
 ]
 
 export const sex_counts = [
-    { name: "男", count: 12 },
-    { name: "女", count: 3 },
+    { key: "1450", name: "男", count: 12 },
+    { key: "1450", name: "女", count: 3 },
+    { key: "全网", name: "男", count: 15 },
+    { key: "全网", name: "女", count: 8 },
+]
+
+export const sex_tgi = [
+    { name: "男", tgi: 122 },
+    { name: "女", tgi: 57},
 ]
 
 export const age_counts = [
-    { name: "≤19", count: 0 },
-    { name: "20~29", count: 1 },
-    { name: "30~39", count: 3 },
-    { name: "40~49", count: 2 },
-    { name: "≥50", count: 1 },
+    { key: "1450", name: "≤19", count: 0 },
+    { key: "1450", name: "20~29", count: 1 },
+    { key: "1450", name: "30~39", count: 3 },
+    { key: "1450", name: "40~49", count: 2 },
+    { key: "1450", name: "≥50", count: 1 },
+
+    { key: "全网", name: "≤19", count: 2 },
+    { key: "全网", name: "20~29", count: 3 },
+    { key: "全网", name: "30~39", count: 5 },
+    { key: "全网", name: "40~49", count: 6 },
+    { key: "全网", name: "≥50", count: 2 },
+]
+
+export const agi_tgi = [
+    { name: "≤19", tgi: 0},
+    { name: "20~29", tgi: 85 },
+    { name: "30~39", tgi: 154 },
+    { name: "40~49", tgi: 85 },
+    { name: "≥50", tgi: 128 },
 ]
 
 export const weibo_auto_reply = [
