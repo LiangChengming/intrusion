@@ -121,15 +121,39 @@ export const ChartById = (props) => {
     );
   };
 
-  const genBarDataWithTgi = (data, tgi) => {
-    var x = [
-      ...new Set(
-        data.map((e) => {
-          return e.name;
-        })
-      ),
-    ].sort();
+  const genBarDataWithTgi = (data, tgi, sortByIdx) => {
+    // X 坐标轴的获取
+    var x = [];
+    if (sortByIdx) {
+      var idx2name = {};
+      data.map((e) => {
+        idx2name[e.idx] = e.name;
+      });
 
+      x = Object.keys(idx2name)
+        .map((k) => {
+          return {
+            idx: k,
+            name: idx2name[k],
+          };
+        })
+        .sort((l, r) => {
+          return l.idx < r.idx;
+        })
+        .map((t) => {
+          return t.name;
+        });
+    } else {
+      x = [
+        ...new Set(
+          data.map((e) => {
+            return e.name;
+          })
+        ),
+      ].sort();
+    }
+
+    // Y 坐标轴的获取
     var splitBykey = {};
     data.map((e) => {
       if (e.key in splitBykey) {
@@ -149,6 +173,7 @@ export const ChartById = (props) => {
       y.push(splitBykey[k]);
     });
 
+    // TGI数据
     y.push({
       name: "TGI",
       type: "line",
@@ -167,8 +192,8 @@ export const ChartById = (props) => {
     return { x, y };
   };
 
-  const sexCount = genBarDataWithTgi(sex_counts, sex_tgi);
-  const ageCount = genBarDataWithTgi(age_counts, age_tgi);
+  const sexCount = genBarDataWithTgi(sex_counts, sex_tgi, false);
+  const ageCount = genBarDataWithTgi(age_counts, age_tgi, true);
 
   console.log("sexCount=", sexCount);
 

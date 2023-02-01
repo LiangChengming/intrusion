@@ -44,17 +44,17 @@ export const sex_tgi = [
 ]
 
 export const age_counts = [
-    { key: "1450", name: "≤19", count: 0 },
-    { key: "1450", name: "20~29", count: 1 },
-    { key: "1450", name: "30~39", count: 3 },
-    { key: "1450", name: "40~49", count: 2 },
-    { key: "1450", name: "≥50", count: 1 },
+    { idx: 0, key: "1450", name: "≤19", count: 0 },
+    { idx: 1, key: "1450", name: "20~29", count: 1 },
+    { idx: 2, key: "1450", name: "30~39", count: 3 },
+    { idx: 3, key: "1450", name: "40~49", count: 2 },
+    { idx: 4, key: "1450", name: "≥50", count: 1 },
 
-    { key: "全网", name: "≤19", count: 2 },
-    { key: "全网", name: "20~29", count: 3 },
-    { key: "全网", name: "30~39", count: 5 },
-    { key: "全网", name: "40~49", count: 6 },
-    { key: "全网", name: "≥50", count: 2 },
+    { idx: 0, key: "全网", name: "≤19", count: 2 },
+    { idx: 1, key: "全网", name: "20~29", count: 3 },
+    { idx: 2, key: "全网", name: "30~39", count: 5 },
+    { idx: 3, key: "全网", name: "40~49", count: 6 },
+    { idx: 4, key: "全网", name: "≥50", count: 2 },
 ]
 
 export const age_tgi = [
