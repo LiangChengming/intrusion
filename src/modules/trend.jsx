@@ -73,16 +73,6 @@ export const TrendSummary = (props) => {
               value: e.count,
             }))}
         />
-        {/* <SimpleChart
-          type="pie"
-          style={{
-            height: "500px",
-            minHeight: "500px",
-            minWidth: "500px",
-            width: "500px",
-          }}
-          className=" bg-shade-gray/20"
-        /> */}
         <GeoChart
           style={{
             height: "500px",
